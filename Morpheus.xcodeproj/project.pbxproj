@@ -21,9 +21,18 @@
 		DEA534CE1C192607001930DA /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C31C192607001930DA /* Transformer.swift */; };
 		DEA534CF1C192607001930DA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C41C192607001930DA /* ViewModel.swift */; };
 		DEA534D01C192607001930DA /* ViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C51C192607001930DA /* ViewModelController.swift */; };
-		DEA534EE1C192674001930DA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA534DD1C192666001930DA /* Result.framework */; };
-		DEA535061C19268E001930DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA534FD1C192686001930DA /* ReactiveCocoa.framework */; };
-		DEA535211C1926B5001930DA /* ReactiveBind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535121C1926AB001930DA /* ReactiveBind.framework */; };
+		DEA5352B1C192798001930DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5352A1C192798001930DA /* AppDelegate.swift */; };
+		DEA5352D1C192798001930DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5352C1C192798001930DA /* ViewController.swift */; };
+		DEA535301C192798001930DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA5352E1C192798001930DA /* Main.storyboard */; };
+		DEA535321C192798001930DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA535311C192798001930DA /* Assets.xcassets */; };
+		DEA535351C192798001930DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA535331C192798001930DA /* LaunchScreen.storyboard */; };
+		DEA535421C1A35C8001930DA /* Morpheus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA534A11C1925A8001930DA /* Morpheus.framework */; };
+		DEA535FD1C1A4216001930DA /* ReactiveBind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FA1C1A4216001930DA /* ReactiveBind.framework */; };
+		DEA535FE1C1A4216001930DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */; };
+		DEA535FF1C1A4216001930DA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FC1C1A4216001930DA /* Result.framework */; };
+		DEA536001C1A4231001930DA /* ReactiveBind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FA1C1A4216001930DA /* ReactiveBind.framework */; };
+		DEA536011C1A4231001930DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */; };
+		DEA536021C1A4231001930DA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FC1C1A4216001930DA /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,145 +43,12 @@
 			remoteGlobalIDString = DEA534A01C1925A8001930DA;
 			remoteInfo = Morpheus;
 		};
-		DEA534DC1C192666001930DA /* PBXContainerItemProxy */ = {
+		DEA5353A1C192826001930DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480571A9572F5009D7229;
-			remoteInfo = "Result-Mac";
-		};
-		DEA534DE1C192666001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480671A9572F5009D7229;
-			remoteInfo = "Result-MacTests";
-		};
-		DEA534E01C192666001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D454807D1A957361009D7229;
-			remoteInfo = "Result-iOS";
-		};
-		DEA534E21C192666001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D45480871A957362009D7229;
-			remoteInfo = "Result-iOSTests";
-		};
-		DEA534E41C192666001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57FCDE471BA280DC00130C48;
-			remoteInfo = "Result-tvOS";
-		};
-		DEA534E61C192666001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57FCDE541BA280E000130C48;
-			remoteInfo = "Result-tvOSTests";
-		};
-		DEA534E81C192666001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D03579A31B2B788F005D26AE;
-			remoteInfo = "Result-watchOS";
-		};
-		DEA534EA1C192666001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D03579B01B2B78A1005D26AE;
-			remoteInfo = "Result-watchOSTests";
-		};
-		DEA534EC1C19266F001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534D11C192666001930DA /* Result.xcodeproj */;
+			containerPortal = DEA534981C1925A8001930DA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D454807C1A957361009D7229;
-			remoteInfo = "Result-iOS";
-		};
-		DEA534F81C192686001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D04725EA19E49ED7006002AA;
-			remoteInfo = "ReactiveCocoa-Mac";
-		};
-		DEA534FA1C192686001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D04725F519E49ED7006002AA;
-			remoteInfo = "ReactiveCocoa-MacTests";
-		};
-		DEA534FC1C192686001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D047260C19E49F82006002AA;
-			remoteInfo = "ReactiveCocoa-iOS";
-		};
-		DEA534FE1C192686001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D047261619E49F82006002AA;
-			remoteInfo = "ReactiveCocoa-iOSTests";
-		};
-		DEA535001C192686001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A9B315541B3940610001CB9C;
-			remoteInfo = "ReactiveCocoa-watchOS";
-		};
-		DEA535021C192686001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 57A4D2411BA13D7A00F7D4B1;
-			remoteInfo = "ReactiveCocoa-tvOS";
-		};
-		DEA535041C19268B001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D047260B19E49F82006002AA;
-			remoteInfo = "ReactiveCocoa-iOS";
-		};
-		DEA5350F1C1926AB001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA535071C1926AA001930DA /* ReactiveBind.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DEA533AE1C19129D001930DA;
-			remoteInfo = ReactiveBind;
-		};
-		DEA535111C1926AB001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA535071C1926AA001930DA /* ReactiveBind.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DEA5338F1C191258001930DA;
-			remoteInfo = "ReactiveBind-iOS";
-		};
-		DEA535131C1926AB001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA535071C1926AA001930DA /* ReactiveBind.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DEA533991C191258001930DA;
-			remoteInfo = "ReactiveBind-iOSTests";
-		};
-		DEA5351F1C1926B0001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA535071C1926AA001930DA /* ReactiveBind.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DEA5338E1C191258001930DA;
-			remoteInfo = "ReactiveBind-iOS";
+			remoteGlobalIDString = DEA534A01C1925A8001930DA;
+			remoteInfo = Morpheus;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -194,9 +70,16 @@
 		DEA534C31C192607001930DA /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		DEA534C41C192607001930DA /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DEA534C51C192607001930DA /* ViewModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelController.swift; sourceTree = "<group>"; };
-		DEA534D11C192666001930DA /* Result.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Result.xcodeproj; path = Carthage/Checkouts/Result/Result.xcodeproj; sourceTree = "<group>"; };
-		DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveCocoa.xcodeproj; path = Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj; sourceTree = "<group>"; };
-		DEA535071C1926AA001930DA /* ReactiveBind.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveBind.xcodeproj; path = Carthage/Checkouts/ReactiveBind/ReactiveBind.xcodeproj; sourceTree = "<group>"; };
+		DEA535281C192798001930DA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA5352A1C192798001930DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DEA5352C1C192798001930DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEA5352F1C192798001930DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEA535311C192798001930DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEA535341C192798001930DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DEA535361C192798001930DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEA535FA1C1A4216001930DA /* ReactiveBind.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveBind.framework; path = Carthage/Build/iOS/ReactiveBind.framework; sourceTree = "<group>"; };
+		DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		DEA535FC1C1A4216001930DA /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,9 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEA535211C1926B5001930DA /* ReactiveBind.framework in Frameworks */,
-				DEA535061C19268E001930DA /* ReactiveCocoa.framework in Frameworks */,
-				DEA534EE1C192674001930DA /* Result.framework in Frameworks */,
+				DEA535FD1C1A4216001930DA /* ReactiveBind.framework in Frameworks */,
+				DEA535FE1C1A4216001930DA /* ReactiveCocoa.framework in Frameworks */,
+				DEA535FF1C1A4216001930DA /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,17 +101,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEA535251C192798001930DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA535421C1A35C8001930DA /* Morpheus.framework in Frameworks */,
+				DEA536001C1A4231001930DA /* ReactiveBind.framework in Frameworks */,
+				DEA536011C1A4231001930DA /* ReactiveCocoa.framework in Frameworks */,
+				DEA536021C1A4231001930DA /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DEA534971C1925A8001930DA = {
 			isa = PBXGroup;
 			children = (
-				DEA535071C1926AA001930DA /* ReactiveBind.xcodeproj */,
-				DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */,
-				DEA534D11C192666001930DA /* Result.xcodeproj */,
+				DEA535FA1C1A4216001930DA /* ReactiveBind.framework */,
+				DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */,
+				DEA535FC1C1A4216001930DA /* Result.framework */,
 				DEA534A31C1925A8001930DA /* Morpheus */,
 				DEA534AF1C1925A8001930DA /* MorpheusTests */,
+				DEA535291C192798001930DA /* Demo */,
 				DEA534A21C1925A8001930DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,6 +133,7 @@
 			children = (
 				DEA534A11C1925A8001930DA /* Morpheus.framework */,
 				DEA534AB1C1925A8001930DA /* MorpheusTests.xctest */,
+				DEA535281C192798001930DA /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -271,42 +167,17 @@
 			path = MorpheusTests;
 			sourceTree = "<group>";
 		};
-		DEA534D21C192666001930DA /* Products */ = {
+		DEA535291C192798001930DA /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				DEA534DD1C192666001930DA /* Result.framework */,
-				DEA534DF1C192666001930DA /* Result-MacTests.xctest */,
-				DEA534E11C192666001930DA /* Result.framework */,
-				DEA534E31C192666001930DA /* Result-iOSTests.xctest */,
-				DEA534E51C192666001930DA /* Result.framework */,
-				DEA534E71C192666001930DA /* Result-tvOSTests.xctest */,
-				DEA534E91C192666001930DA /* Result.framework */,
-				DEA534EB1C192666001930DA /* Result-watchOSTests.xctest */,
+				DEA5352A1C192798001930DA /* AppDelegate.swift */,
+				DEA5352C1C192798001930DA /* ViewController.swift */,
+				DEA5352E1C192798001930DA /* Main.storyboard */,
+				DEA535311C192798001930DA /* Assets.xcassets */,
+				DEA535331C192798001930DA /* LaunchScreen.storyboard */,
+				DEA535361C192798001930DA /* Info.plist */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DEA534F01C192686001930DA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DEA534F91C192686001930DA /* ReactiveCocoa.framework */,
-				DEA534FB1C192686001930DA /* ReactiveCocoaTests.xctest */,
-				DEA534FD1C192686001930DA /* ReactiveCocoa.framework */,
-				DEA534FF1C192686001930DA /* ReactiveCocoaTests.xctest */,
-				DEA535011C192686001930DA /* ReactiveCocoa.framework */,
-				DEA535031C192686001930DA /* ReactiveCocoa.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DEA535081C1926AA001930DA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DEA535101C1926AB001930DA /* ReactiveBind.framework */,
-				DEA535121C1926AB001930DA /* ReactiveBind.framework */,
-				DEA535141C1926AB001930DA /* ReactiveBind-iOSTests.xctest */,
-			);
-			name = Products;
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,9 +194,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DEA534A01C1925A8001930DA /* Morpheus */ = {
+		DEA534A01C1925A8001930DA /* Morpheus-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DEA534B51C1925A8001930DA /* Build configuration list for PBXNativeTarget "Morpheus" */;
+			buildConfigurationList = DEA534B51C1925A8001930DA /* Build configuration list for PBXNativeTarget "Morpheus-iOS" */;
 			buildPhases = (
 				DEA5349C1C1925A8001930DA /* Sources */,
 				DEA5349D1C1925A8001930DA /* Frameworks */,
@@ -335,11 +206,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				DEA535201C1926B0001930DA /* PBXTargetDependency */,
-				DEA535051C19268B001930DA /* PBXTargetDependency */,
-				DEA534ED1C19266F001930DA /* PBXTargetDependency */,
 			);
-			name = Morpheus;
+			name = "Morpheus-iOS";
 			productName = Morpheus;
 			productReference = DEA534A11C1925A8001930DA /* Morpheus.framework */;
 			productType = "com.apple.product-type.framework";
@@ -362,6 +230,25 @@
 			productReference = DEA534AB1C1925A8001930DA /* MorpheusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DEA535271C192798001930DA /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA535371C192798001930DA /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				DEA535241C192798001930DA /* Sources */,
+				DEA535251C192798001930DA /* Frameworks */,
+				DEA535261C192798001930DA /* Resources */,
+				DEA536031C1A4251001930DA /* Carthage Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEA5353B1C192826001930DA /* PBXTargetDependency */,
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = DEA535281C192798001930DA /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -378,6 +265,9 @@
 					DEA534AA1C1925A8001930DA = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
+					DEA535271C192798001930DA = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 				};
 			};
 			buildConfigurationList = DEA5349B1C1925A8001930DA /* Build configuration list for PBXProject "Morpheus" */;
@@ -386,153 +276,19 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = DEA534971C1925A8001930DA;
 			productRefGroup = DEA534A21C1925A8001930DA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = DEA535081C1926AA001930DA /* Products */;
-					ProjectRef = DEA535071C1926AA001930DA /* ReactiveBind.xcodeproj */;
-				},
-				{
-					ProductGroup = DEA534F01C192686001930DA /* Products */;
-					ProjectRef = DEA534EF1C192686001930DA /* ReactiveCocoa.xcodeproj */;
-				},
-				{
-					ProductGroup = DEA534D21C192666001930DA /* Products */;
-					ProjectRef = DEA534D11C192666001930DA /* Result.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				DEA534A01C1925A8001930DA /* Morpheus */,
+				DEA534A01C1925A8001930DA /* Morpheus-iOS */,
 				DEA534AA1C1925A8001930DA /* MorpheusTests */,
+				DEA535271C192798001930DA /* Demo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		DEA534DD1C192666001930DA /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = DEA534DC1C192666001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534DF1C192666001930DA /* Result-MacTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-MacTests.xctest";
-			remoteRef = DEA534DE1C192666001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534E11C192666001930DA /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = DEA534E01C192666001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534E31C192666001930DA /* Result-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-iOSTests.xctest";
-			remoteRef = DEA534E21C192666001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534E51C192666001930DA /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = DEA534E41C192666001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534E71C192666001930DA /* Result-tvOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-tvOSTests.xctest";
-			remoteRef = DEA534E61C192666001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534E91C192666001930DA /* Result.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Result.framework;
-			remoteRef = DEA534E81C192666001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534EB1C192666001930DA /* Result-watchOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "Result-watchOSTests.xctest";
-			remoteRef = DEA534EA1C192666001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534F91C192686001930DA /* ReactiveCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveCocoa.framework;
-			remoteRef = DEA534F81C192686001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534FB1C192686001930DA /* ReactiveCocoaTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactiveCocoaTests.xctest;
-			remoteRef = DEA534FA1C192686001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534FD1C192686001930DA /* ReactiveCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveCocoa.framework;
-			remoteRef = DEA534FC1C192686001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA534FF1C192686001930DA /* ReactiveCocoaTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ReactiveCocoaTests.xctest;
-			remoteRef = DEA534FE1C192686001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA535011C192686001930DA /* ReactiveCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveCocoa.framework;
-			remoteRef = DEA535001C192686001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA535031C192686001930DA /* ReactiveCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveCocoa.framework;
-			remoteRef = DEA535021C192686001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA535101C1926AB001930DA /* ReactiveBind.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveBind.framework;
-			remoteRef = DEA5350F1C1926AB001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA535121C1926AB001930DA /* ReactiveBind.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ReactiveBind.framework;
-			remoteRef = DEA535111C1926AB001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEA535141C1926AB001930DA /* ReactiveBind-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "ReactiveBind-iOSTests.xctest";
-			remoteRef = DEA535131C1926AB001930DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DEA5349F1C1925A8001930DA /* Resources */ = {
@@ -549,7 +305,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEA535261C192798001930DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA535351C192798001930DA /* LaunchScreen.storyboard in Resources */,
+				DEA535321C192798001930DA /* Assets.xcassets in Resources */,
+				DEA535301C192798001930DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DEA536031C1A4251001930DA /* Carthage Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveBind.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+			);
+			name = "Carthage Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DEA5349C1C1925A8001930DA /* Sources */ = {
@@ -578,30 +364,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEA535241C192798001930DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA5352D1C192798001930DA /* ViewController.swift in Sources */,
+				DEA5352B1C192798001930DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		DEA534AE1C1925A8001930DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DEA534A01C1925A8001930DA /* Morpheus */;
+			target = DEA534A01C1925A8001930DA /* Morpheus-iOS */;
 			targetProxy = DEA534AD1C1925A8001930DA /* PBXContainerItemProxy */;
 		};
-		DEA534ED1C19266F001930DA /* PBXTargetDependency */ = {
+		DEA5353B1C192826001930DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Result-iOS";
-			targetProxy = DEA534EC1C19266F001930DA /* PBXContainerItemProxy */;
-		};
-		DEA535051C19268B001930DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveCocoa-iOS";
-			targetProxy = DEA535041C19268B001930DA /* PBXContainerItemProxy */;
-		};
-		DEA535201C1926B0001930DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveBind-iOS";
-			targetProxy = DEA5351F1C1926B0001930DA /* PBXContainerItemProxy */;
+			target = DEA534A01C1925A8001930DA /* Morpheus-iOS */;
+			targetProxy = DEA5353A1C192826001930DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DEA5352E1C192798001930DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEA5352F1C192798001930DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DEA535331C192798001930DA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEA535341C192798001930DA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DEA534B31C1925A8001930DA /* Debug */ = {
@@ -701,11 +505,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Morpheus/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.mpurland.Morpheus;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Morpheus;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -719,11 +527,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Morpheus/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.mpurland.Morpheus;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Morpheus;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -748,6 +560,36 @@
 			};
 			name = Release;
 		};
+		DEA535381C192798001930DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.mpurland.morpheus.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DEA535391C192798001930DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Demo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.mpurland.morpheus.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -760,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEA534B51C1925A8001930DA /* Build configuration list for PBXNativeTarget "Morpheus" */ = {
+		DEA534B51C1925A8001930DA /* Build configuration list for PBXNativeTarget "Morpheus-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEA534B61C1925A8001930DA /* Debug */,
@@ -774,6 +616,15 @@
 			buildConfigurations = (
 				DEA534B91C1925A8001930DA /* Debug */,
 				DEA534BA1C1925A8001930DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEA535371C192798001930DA /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA535381C192798001930DA /* Debug */,
+				DEA535391C192798001930DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
