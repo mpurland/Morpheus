@@ -1,12 +1,17 @@
 import Foundation
 import ReactiveCocoa
 
+/// A shortcut for SignalProducer<A, B>.empty
+func emptyProducer<Value, Error>() -> SignalProducer<Value, Error> {
+    return SignalProducer<Value, Error>.empty
+}
+
 extension SignalProducerType {
     /// Supresss the error from the signal producer. This is not recommended.
     public func suppressError() -> SignalProducer<Value, NoError> {
         return flatMapError { _ in SignalProducer<Value, NoError>.empty }
     }
-
+    
     public func mapReplace<V>(@autoclosure(escaping) closure: () -> V) -> SignalProducer<V, Error> {
         return map { _ in closure() }
     }
@@ -22,7 +27,7 @@ extension SignalProducerType {
     public func mapEmpty() -> SignalProducer<Void, Error> {
         return map { _ in SignalProducer<Void, Error>.empty }
     }
-
+    
     public func filter(@autoclosure(escaping) closure: () -> Bool) -> SignalProducer<Value, Error> {
         return filter { _ in closure() }
     }
