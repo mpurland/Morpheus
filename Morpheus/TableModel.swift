@@ -1,9 +1,9 @@
 import Foundation
 import ReactiveCocoa
 
-public protocol TableModel: ModelableType {
+public protocol TableModel: Modelable {
     /// A signal that sends an event when the model has been updated.
-    var updated: Signal<Void, NoError> { get }
+    var updated: SignalProducer<Void, NoError> { get }
 }
 
 public class ListTableModel<Model> {
@@ -11,7 +11,6 @@ public class ListTableModel<Model> {
     public typealias ModelType = [T]
     
     let modelProperty = MutableProperty<ModelType>([])
-    private let (updatedSignal, updatedObserver) = Signal<Void, NoError>.pipe()
     
     public var model: ModelType {
         get {
@@ -22,17 +21,13 @@ public class ListTableModel<Model> {
         }
     }
     
-//    convenience init(model: ModelType) {
-//        self.init(modelProducer: SignalProducer<ModelType, NoError>(value: model))
-//    }
-    
     public init(producer: SignalProducer<ModelType, NoError>) {
         modelProperty <~ producer
     }
 }
 
 extension ListTableModel: TableModel {
-    public var updated: Signal<Void, NoError> {
-        return updatedSignal
+    public var updated: SignalProducer<Void, NoError> {
+        return modelProperty.producer.map { _ in }
     }
 }

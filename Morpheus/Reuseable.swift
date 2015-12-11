@@ -8,7 +8,7 @@ public protocol ReuseableType {
 
 extension ReuseableType {
     /// By default, use the class name as the reuse identifier
-    public var reuseIdentifier: ReuseIdentifier {
+    public var reuseIdentifier: String {
         return NSStringFromClass(self.dynamicType as! AnyObject.Type) as String
     }
 }

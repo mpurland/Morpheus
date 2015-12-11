@@ -1,16 +1,19 @@
 import Foundation
 import ReactiveCocoa
 
-/// A view model. The `active` property determines if this view model is currently active or inactive.
-public protocol ViewModelType {
+/// A view model.
+public protocol ViewModel {
+    /// The `active` property determines if this view model is currently active or inactive.
     var active: MutableProperty<Bool> { get }
     
+    /// The `didBecomeActiveProducer` is a signal producer that sends an event when the view model becomes active.
     var didBecomeActiveProducer: SignalProducer<Void, NoError> { get }
-    
+
+    /// The `didBecomeInactiveProducer` is a signal producer that sends an event when the view model becomes inactive.
     var didBecomeInactiveProducer: SignalProducer<Void, NoError> { get }
 }
 
-extension ViewModelType {
+extension ViewModel {
     public var didBecomeActiveProducer: SignalProducer<Void, NoError> {
         return active.producer.skipRepeats().filter(true).map { value -> Bool in
             print("active = \(value)")
@@ -25,14 +28,3 @@ extension ViewModelType {
         }.map { _ in SignalProducer<Void, NoError>.empty }
     }
 }
-
-public class ViewModelTypeOf<Model> {
-    public let active = MutableProperty<Bool>(false)
-    public let model: ConstantProperty<Model>
-    
-    public init(_ otherModel: Model) {
-        model = ConstantProperty(otherModel)
-    }
-}
-
-extension ViewModelTypeOf: ViewModelType {}

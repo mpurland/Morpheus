@@ -11,7 +11,7 @@ private struct ViewModelableAssociationKeys {
 }
 
 public protocol ViewModelable {
-    typealias T: ViewModelType
+    typealias T: ViewModel
     
     var viewModel: MutableProperty<T> { get }
     
@@ -43,10 +43,10 @@ extension ViewModelableBindable where Self: UIViewController {
     }
 }
 
-public class ViewModelableBindableController<ViewModel: ViewModelType>: UIViewController {
-    private let otherDefaultViewModel: ViewModel
+public class ViewModelableBindableController<VM: ViewModel>: UIViewController {
+    private let otherDefaultViewModel: VM
     
-    init(defaultViewModel: ViewModel) {
+    init(defaultViewModel: VM) {
         otherDefaultViewModel = defaultViewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -59,7 +59,7 @@ public class ViewModelableBindableController<ViewModel: ViewModelType>: UIViewCo
 }
 
 extension ViewModelableBindableController: ViewModelableBindable {
-    public func defaultViewModel() -> ViewModel {
+    public func defaultViewModel() -> VM {
         return otherDefaultViewModel
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE14D9531C1B2B2600A2AA41 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D9521C1B2B2600A2AA41 /* GameList.swift */; };
+		DE14D9571C1B2F7200A2AA41 /* ViewModelOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */; };
 		DEA534A51C1925A8001930DA /* Morpheus.h in Headers */ = {isa = PBXBuildFile; fileRef = DEA534A41C1925A8001930DA /* Morpheus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEA534AC1C1925A8001930DA /* Morpheus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA534A11C1925A8001930DA /* Morpheus.framework */; };
 		DEA534B11C1925A8001930DA /* MorpheusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534B01C1925A8001930DA /* MorpheusTests.swift */; };
@@ -33,6 +35,17 @@
 		DEA536001C1A4231001930DA /* ReactiveBind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FA1C1A4216001930DA /* ReactiveBind.framework */; };
 		DEA536011C1A4231001930DA /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */; };
 		DEA536021C1A4231001930DA /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FC1C1A4216001930DA /* Result.framework */; };
+		DEA536051C1B2062001930DA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA536041C1B2062001930DA /* Game.swift */; };
+		DEA536071C1B2078001930DA /* GameCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA536061C1B2078001930DA /* GameCellViewModel.swift */; };
+		DEA536091C1B2086001930DA /* PreparableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA536081C1B2086001930DA /* PreparableCell.swift */; };
+		DEA5360B1C1B2097001930DA /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5360A1C1B2097001930DA /* Cell.swift */; };
+		DEA5360D1C1B20A5001930DA /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5360C1C1B20A5001930DA /* GameCell.swift */; };
+		DEA5360F1C1B20B8001930DA /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5360E1C1B20B8001930DA /* GameListViewModel.swift */; };
+		DEA536111C1B20CA001930DA /* GameListTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA536101C1B20CA001930DA /* GameListTableModel.swift */; };
+		DEA536131C1B20D2001930DA /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA536121C1B20D2001930DA /* ApiManager.swift */; };
+		DEA536161C1B2218001930DA /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA536141C1B2218001930DA /* Swiftz.framework */; };
+		DEA536171C1B2218001930DA /* Tyro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA536151C1B2218001930DA /* Tyro.framework */; };
+		DEA5361D1C1B2685001930DA /* gamelist.json in Resources */ = {isa = PBXBuildFile; fileRef = DEA5361C1C1B2685001930DA /* gamelist.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE14D9521C1B2B2600A2AA41 /* GameList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
+		DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelOf.swift; sourceTree = "<group>"; };
 		DEA534A11C1925A8001930DA /* Morpheus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Morpheus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA534A41C1925A8001930DA /* Morpheus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Morpheus.h; sourceTree = "<group>"; };
 		DEA534A61C1925A8001930DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +95,17 @@
 		DEA535FA1C1A4216001930DA /* ReactiveBind.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveBind.framework; path = Carthage/Build/iOS/ReactiveBind.framework; sourceTree = "<group>"; };
 		DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		DEA535FC1C1A4216001930DA /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		DEA536041C1B2062001930DA /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DEA536061C1B2078001930DA /* GameCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCellViewModel.swift; sourceTree = "<group>"; };
+		DEA536081C1B2086001930DA /* PreparableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreparableCell.swift; sourceTree = "<group>"; };
+		DEA5360A1C1B2097001930DA /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		DEA5360C1C1B20A5001930DA /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		DEA5360E1C1B20B8001930DA /* GameListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		DEA536101C1B20CA001930DA /* GameListTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListTableModel.swift; sourceTree = "<group>"; };
+		DEA536121C1B20D2001930DA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		DEA536141C1B2218001930DA /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Demo/Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
+		DEA536151C1B2218001930DA /* Tyro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tyro.framework; path = Demo/Carthage/Build/iOS/Tyro.framework; sourceTree = "<group>"; };
+		DEA5361C1C1B2685001930DA /* gamelist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gamelist.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +135,8 @@
 				DEA536001C1A4231001930DA /* ReactiveBind.framework in Frameworks */,
 				DEA536011C1A4231001930DA /* ReactiveCocoa.framework in Frameworks */,
 				DEA536021C1A4231001930DA /* Result.framework in Frameworks */,
+				DEA536161C1B2218001930DA /* Swiftz.framework in Frameworks */,
+				DEA536171C1B2218001930DA /* Tyro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +146,8 @@
 		DEA534971C1925A8001930DA = {
 			isa = PBXGroup;
 			children = (
+				DEA536141C1B2218001930DA /* Swiftz.framework */,
+				DEA536151C1B2218001930DA /* Tyro.framework */,
 				DEA535FA1C1A4216001930DA /* ReactiveBind.framework */,
 				DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */,
 				DEA535FC1C1A4216001930DA /* Result.framework */,
@@ -153,6 +183,7 @@
 				DEA534C21C192607001930DA /* TableViewDataSource.swift */,
 				DEA534C31C192607001930DA /* Transformer.swift */,
 				DEA534C41C192607001930DA /* ViewModel.swift */,
+				DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */,
 				DEA534C51C192607001930DA /* ViewModelController.swift */,
 			);
 			path = Morpheus;
@@ -176,6 +207,16 @@
 				DEA535311C192798001930DA /* Assets.xcassets */,
 				DEA535331C192798001930DA /* LaunchScreen.storyboard */,
 				DEA535361C192798001930DA /* Info.plist */,
+				DEA536041C1B2062001930DA /* Game.swift */,
+				DEA536061C1B2078001930DA /* GameCellViewModel.swift */,
+				DEA536081C1B2086001930DA /* PreparableCell.swift */,
+				DEA5360A1C1B2097001930DA /* Cell.swift */,
+				DEA5360C1C1B20A5001930DA /* GameCell.swift */,
+				DEA5360E1C1B20B8001930DA /* GameListViewModel.swift */,
+				DEA536101C1B20CA001930DA /* GameListTableModel.swift */,
+				DEA536121C1B20D2001930DA /* ApiManager.swift */,
+				DEA5361C1C1B2685001930DA /* gamelist.json */,
+				DE14D9521C1B2B2600A2AA41 /* GameList.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -312,6 +353,7 @@
 				DEA535351C192798001930DA /* LaunchScreen.storyboard in Resources */,
 				DEA535321C192798001930DA /* Assets.xcassets in Resources */,
 				DEA535301C192798001930DA /* Main.storyboard in Resources */,
+				DEA5361D1C1B2685001930DA /* gamelist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +369,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveBind.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Demo/Carthage/Build/iOS/Swiftz.framework",
+				"$(SRCROOT)/Demo/Carthage/Build/iOS/Tyro.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -353,6 +397,7 @@
 				DEA534CA1C192607001930DA /* Row.swift in Sources */,
 				DEA534C71C192607001930DA /* Model.swift in Sources */,
 				DEA534CC1C192607001930DA /* TableModel.swift in Sources */,
+				DE14D9571C1B2F7200A2AA41 /* ViewModelOf.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,8 +413,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA536091C1B2086001930DA /* PreparableCell.swift in Sources */,
+				DEA536071C1B2078001930DA /* GameCellViewModel.swift in Sources */,
+				DEA536131C1B20D2001930DA /* ApiManager.swift in Sources */,
 				DEA5352D1C192798001930DA /* ViewController.swift in Sources */,
+				DEA536111C1B20CA001930DA /* GameListTableModel.swift in Sources */,
+				DEA536051C1B2062001930DA /* Game.swift in Sources */,
+				DEA5360F1C1B20B8001930DA /* GameListViewModel.swift in Sources */,
 				DEA5352B1C192798001930DA /* AppDelegate.swift in Sources */,
+				DE14D9531C1B2B2600A2AA41 /* GameList.swift in Sources */,
+				DEA5360B1C1B2097001930DA /* Cell.swift in Sources */,
+				DEA5360D1C1B20A5001930DA /* GameCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +621,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Demo/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -582,6 +637,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Demo/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
