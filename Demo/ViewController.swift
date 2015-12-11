@@ -11,161 +11,6 @@ import ReactiveCocoa
 import ReactiveBind
 import Morpheus
 
-struct Game {
-    let whitePlayer: String
-    let blackPlayer: String
-    let moves: String
-    let opening: String
-}
-
-struct GameCellViewModel {
-    private let game: Game
-
-    var title: String {
-        return "\(game.whitePlayer) - \(game.blackPlayer)"
-    }
-
-    var subtitle: String {
-        return "\(game.opening): \(game.moves)"
-    }
-
-    init(game otherGame: Game) {
-        game = otherGame
-    }
-}
-
-protocol PreparableCell {
-    func prepareCell()
-}
-
-class Cell: UITableViewCell {
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: .Subtitle, reuseIdentifier: reuseIdentifier)
-        commonInit()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-
-    private func commonInit() {
-        var onceToken: dispatch_once_t = 0
-        dispatch_once(&onceToken) {
-            self.prepareCell()
-        }
-    }
-}
-
-extension Cell: PreparableCell {
-    func prepareCell() {
-    }
-}
-
-class GameCell: Cell {
-    let viewModelProperty = MutableProperty<GameCellViewModel?>(nil)
-
-    var viewModel: GameCellViewModel? {
-        get {
-            return viewModelProperty.value
-        }
-        set {
-            viewModelProperty.value = newValue
-        }
-    }
-
-    override func prepareCell() {
-        textLabel!.rac_text <~ viewModelProperty.producer.map { $0?.title ?? "" }
-        detailTextLabel!.rac_text <~ viewModelProperty.producer.map { $0?.subtitle ?? "" }
-    }
-}
-
-typealias GameList = [Game]
-
-func modelFromData(data: NSData) -> GameList? {
-    let json: AnyObject?
-    do {
-        try json = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0))
-    } catch _ {
-        json = nil
-    }
-
-    if let json = json as? NSDictionary {
-        if let list = json["list"] as? [NSDictionary] {
-            print("list: \(list)")
-            var allGames: [Game] = []
-            for gameDict in list {
-                let whitePlayer = gameDict.valueForKeyPath("players.white.userId") as? String
-                let blackPlayer = gameDict.valueForKeyPath("players.black.userId") as? String
-                let moves = gameDict["moves"] as? String
-                let opening = gameDict.valueForKeyPath("opening.name") as? String
-
-                if let whitePlayer = whitePlayer, let blackPlayer = blackPlayer, let moves = moves, let opening = opening {
-                    let game = Game(whitePlayer: whitePlayer, blackPlayer: blackPlayer, moves: moves, opening: opening)
-                    allGames.append(game)
-                }
-            }
-
-        return allGames
-        }
-    }
-
-    return nil
-}
-
-struct GameListViewModel {
-    let gameList = MutableProperty<GameList?>(nil)
-    let apiManager = ApiManager()
-
-    init(gameList otherGameList: GameList?) {
-        gameList.value = otherGameList
-    }
-
-    init() {
-        self.init(gameList: nil)
-    }
-
-    var games: [Game] {
-        return gameList.value ?? []
-    }
-
-    var loading: SignalProducer<Bool, NoError> {
-        return gameList.producer.map { return $0 == nil }
-    }
-
-    var empty: SignalProducer<Bool, NoError> {
-        return gameList.producer.map { $0?.count == 0 }
-    }
-
-    func load() {
-        gameList <~ apiManager.loadAction.apply().suppressError().delay(2.0, onScheduler: QueueScheduler())
-    }
-}
-
-//extension GameListViewModel: ViewModelType {}
-
-class ApiManager {
-    let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
-
-    var loadAction: Action<Void, GameList?, NSError> {
-        return Action { _ in
-            return self.session.rac_dataWithRequest(NSURLRequest(URL: NSURL(string: "http://en.lichess.org/api/game?username=hiimgosu&rated&nb=100&with_opening=1&with_moves=1")!)).map { data, response in modelFromData(data) }
-        }
-    }
-}
-
-class GameListTableModel: ListTableModel<Game> {
-    let apiManager = ApiManager()
-
-    init() {
-        super.init(producer: SignalProducer<[Game], NoError>.empty)
-    }
-
-    func load() {
-    //        modelProperty <~
-    }
-}
-
 class ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var loadingView: UIActivityIndicatorView!
@@ -226,14 +71,14 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ViewModelableBindable {
-    typealias T = ViewModelTypeOf<GameListViewModel>
+    typealias T = ViewModelOf<GameListViewModel>
 
     var viewModelProducer: SignalProducer<GameListViewModel, NoError> {
         return viewModel.producer.flatMap(.Latest) { $0.model.producer }
     }
 
     func defaultViewModel() -> ViewController.T {
-        return ViewModelTypeOf<GameListViewModel>(GameListViewModel())
+        return ViewModelOf<GameListViewModel>(GameListViewModel())
     }
 }
 
