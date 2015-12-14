@@ -14,7 +14,6 @@
 		DE14D95D1C1B3A7E00A2AA41 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D95C1C1B3A7E00A2AA41 /* CellType.swift */; };
 		DE14D95F1C1B3AF600A2AA41 /* Configurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D95E1C1B3AF600A2AA41 /* Configurer.swift */; };
 		DEA534A51C1925A8001930DA /* Morpheus.h in Headers */ = {isa = PBXBuildFile; fileRef = DEA534A41C1925A8001930DA /* Morpheus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEA534C61C192607001930DA /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534BB1C192607001930DA /* Action.swift */; };
 		DEA534C71C192607001930DA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534BC1C192607001930DA /* Model.swift */; };
 		DEA534C91C192607001930DA /* Reuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534BE1C192607001930DA /* Reuseable.swift */; };
 		DEA534CA1C192607001930DA /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534BF1C192607001930DA /* Row.swift */; };
@@ -103,7 +102,6 @@
 		DEA534A61C1925A8001930DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEA534B01C1925A8001930DA /* MorpheusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorpheusTests.swift; sourceTree = "<group>"; };
 		DEA534B21C1925A8001930DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEA534BB1C192607001930DA /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		DEA534BC1C192607001930DA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DEA534BE1C192607001930DA /* Reuseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reuseable.swift; sourceTree = "<group>"; };
 		DEA534BF1C192607001930DA /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
@@ -135,6 +133,9 @@
 		DEA536151C1B2218001930DA /* Tyro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tyro.framework; path = Demo/Carthage/Build/iOS/Tyro.framework; sourceTree = "<group>"; };
 		DEA5361C1C1B2685001930DA /* gamelist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gamelist.json; sourceTree = "<group>"; };
 		DEBE2A201C1F660E005DEF05 /* Morpheus-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morpheus-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBE2A4E1C1F6E95005DEF05 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		DEBE2A4F1C1F6E95005DEF05 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DEBE2A501C1F6E95005DEF05 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +179,9 @@
 		DEA534971C1925A8001930DA = {
 			isa = PBXGroup;
 			children = (
+				DEBE2A4E1C1F6E95005DEF05 /* Cartfile */,
+				DEBE2A4F1C1F6E95005DEF05 /* LICENSE */,
+				DEBE2A501C1F6E95005DEF05 /* README.md */,
 				DEA536141C1B2218001930DA /* Swiftz.framework */,
 				DEA536151C1B2218001930DA /* Tyro.framework */,
 				DEA535FA1C1A4216001930DA /* ReactiveBind.framework */,
@@ -207,7 +211,6 @@
 				DEA534A61C1925A8001930DA /* Info.plist */,
 				DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */,
 				DEA534C21C192607001930DA /* TableViewDataSource.swift */,
-				DEA534BB1C192607001930DA /* Action.swift */,
 				DEA534BC1C192607001930DA /* Model.swift */,
 				DEA534BE1C192607001930DA /* Reuseable.swift */,
 				DEA534BF1C192607001930DA /* Row.swift */,
@@ -429,7 +432,6 @@
 				DE14D95F1C1B3AF600A2AA41 /* Configurer.swift in Sources */,
 				DE14D9591C1B34CF00A2AA41 /* ReactiveCocoaExt.swift in Sources */,
 				DEA534CD1C192607001930DA /* TableViewDataSource.swift in Sources */,
-				DEA534C61C192607001930DA /* Action.swift in Sources */,
 				DE14D95B1C1B3A4200A2AA41 /* Section.swift in Sources */,
 				DEA534C91C192607001930DA /* Reuseable.swift in Sources */,
 				DEA534CA1C192607001930DA /* Row.swift in Sources */,

@@ -1,10 +1,6 @@
 import Foundation
 import ReactiveCocoa
-
-/// A shortcut for SignalProducer<A, B>.empty
-func emptyProducer<Value, Error>() -> SignalProducer<Value, Error> {
-    return SignalProducer<Value, Error>.empty
-}
+import ReactiveBind
 
 public func <~ <P: MutablePropertyType>(property: P?, signal: Signal<P.Value, NoError>) -> Disposable? {
     if let property = property {
@@ -25,11 +21,6 @@ public func <~ <P: MutablePropertyType>(property: P?, signal: SignalProducer<P.V
 }
 
 extension SignalProducerType {
-    /// Supresss the error from the signal producer. This is not recommended.
-    public func suppressError() -> SignalProducer<Value, NoError> {
-        return flatMapError { _ in SignalProducer<Value, NoError>.empty }
-    }
-    
     public func mapReplace<V>(@autoclosure(escaping) closure: () -> V) -> SignalProducer<V, Error> {
         return map { _ in closure() }
     }
