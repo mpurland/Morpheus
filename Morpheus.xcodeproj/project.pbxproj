@@ -10,9 +10,10 @@
 		DE14D9531C1B2B2600A2AA41 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D9521C1B2B2600A2AA41 /* GameList.swift */; };
 		DE14D9571C1B2F7200A2AA41 /* ViewModelOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */; };
 		DE14D9591C1B34CF00A2AA41 /* ReactiveCocoaExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */; };
+		DE14D95B1C1B3A4200A2AA41 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D95A1C1B3A4200A2AA41 /* Section.swift */; };
+		DE14D95D1C1B3A7E00A2AA41 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D95C1C1B3A7E00A2AA41 /* CellType.swift */; };
+		DE14D95F1C1B3AF600A2AA41 /* Configurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D95E1C1B3AF600A2AA41 /* Configurer.swift */; };
 		DEA534A51C1925A8001930DA /* Morpheus.h in Headers */ = {isa = PBXBuildFile; fileRef = DEA534A41C1925A8001930DA /* Morpheus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DEA534AC1C1925A8001930DA /* Morpheus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA534A11C1925A8001930DA /* Morpheus.framework */; };
-		DEA534B11C1925A8001930DA /* MorpheusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534B01C1925A8001930DA /* MorpheusTests.swift */; };
 		DEA534C61C192607001930DA /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534BB1C192607001930DA /* Action.swift */; };
 		DEA534C71C192607001930DA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534BC1C192607001930DA /* Model.swift */; };
 		DEA534C91C192607001930DA /* Reuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534BE1C192607001930DA /* Reuseable.swift */; };
@@ -46,16 +47,18 @@
 		DEA536161C1B2218001930DA /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA536141C1B2218001930DA /* Swiftz.framework */; };
 		DEA536171C1B2218001930DA /* Tyro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA536151C1B2218001930DA /* Tyro.framework */; };
 		DEA5361D1C1B2685001930DA /* gamelist.json in Resources */ = {isa = PBXBuildFile; fileRef = DEA5361C1C1B2685001930DA /* gamelist.json */; };
+		DEBE2A251C1F660E005DEF05 /* Morpheus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA534A11C1925A8001930DA /* Morpheus.framework */; };
+		DEBE2A2B1C1F6617005DEF05 /* ReactiveBind.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FA1C1A4216001930DA /* ReactiveBind.framework */; };
+		DEBE2A2C1C1F6617005DEF05 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */; };
+		DEBE2A2D1C1F6617005DEF05 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA535FC1C1A4216001930DA /* Result.framework */; };
+		DEBE2A2E1C1F6663005DEF05 /* MorpheusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534B01C1925A8001930DA /* MorpheusTests.swift */; };
+		DEBE2A301C1F6853005DEF05 /* ReactiveBind.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA535FA1C1A4216001930DA /* ReactiveBind.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEBE2A311C1F6853005DEF05 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEBE2A321C1F6853005DEF05 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA535FC1C1A4216001930DA /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEBE2A331C1F6853005DEF05 /* Morpheus.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA534A11C1925A8001930DA /* Morpheus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DEA534AD1C1925A8001930DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEA534981C1925A8001930DA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DEA534A01C1925A8001930DA;
-			remoteInfo = Morpheus;
-		};
 		DEA5353A1C192826001930DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DEA534981C1925A8001930DA /* Project object */;
@@ -63,16 +66,41 @@
 			remoteGlobalIDString = DEA534A01C1925A8001930DA;
 			remoteInfo = Morpheus;
 		};
+		DEBE2A261C1F660E005DEF05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA534981C1925A8001930DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEA534A01C1925A8001930DA;
+			remoteInfo = "Morpheus-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DEBE2A2F1C1F682D005DEF05 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DEBE2A301C1F6853005DEF05 /* ReactiveBind.framework in CopyFiles */,
+				DEBE2A311C1F6853005DEF05 /* ReactiveCocoa.framework in CopyFiles */,
+				DEBE2A321C1F6853005DEF05 /* Result.framework in CopyFiles */,
+				DEBE2A331C1F6853005DEF05 /* Morpheus.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DE14D9521C1B2B2600A2AA41 /* GameList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
 		DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelOf.swift; sourceTree = "<group>"; };
 		DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveCocoaExt.swift; sourceTree = "<group>"; };
+		DE14D95A1C1B3A4200A2AA41 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		DE14D95C1C1B3A7E00A2AA41 /* CellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
+		DE14D95E1C1B3AF600A2AA41 /* Configurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurer.swift; sourceTree = "<group>"; };
 		DEA534A11C1925A8001930DA /* Morpheus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Morpheus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA534A41C1925A8001930DA /* Morpheus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Morpheus.h; sourceTree = "<group>"; };
 		DEA534A61C1925A8001930DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEA534AB1C1925A8001930DA /* MorpheusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorpheusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA534B01C1925A8001930DA /* MorpheusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorpheusTests.swift; sourceTree = "<group>"; };
 		DEA534B21C1925A8001930DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEA534BB1C192607001930DA /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -106,6 +134,7 @@
 		DEA536141C1B2218001930DA /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Demo/Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
 		DEA536151C1B2218001930DA /* Tyro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tyro.framework; path = Demo/Carthage/Build/iOS/Tyro.framework; sourceTree = "<group>"; };
 		DEA5361C1C1B2685001930DA /* gamelist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gamelist.json; sourceTree = "<group>"; };
+		DEBE2A201C1F660E005DEF05 /* Morpheus-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morpheus-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,14 +148,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEA534A81C1925A8001930DA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEA534AC1C1925A8001930DA /* Morpheus.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DEA535251C192798001930DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,6 +158,17 @@
 				DEA536021C1A4231001930DA /* Result.framework in Frameworks */,
 				DEA536161C1B2218001930DA /* Swiftz.framework in Frameworks */,
 				DEA536171C1B2218001930DA /* Tyro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBE2A1D1C1F660E005DEF05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEBE2A251C1F660E005DEF05 /* Morpheus.framework in Frameworks */,
+				DEBE2A2B1C1F6617005DEF05 /* ReactiveBind.framework in Frameworks */,
+				DEBE2A2C1C1F6617005DEF05 /* ReactiveCocoa.framework in Frameworks */,
+				DEBE2A2D1C1F6617005DEF05 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,8 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				DEA534A11C1925A8001930DA /* Morpheus.framework */,
-				DEA534AB1C1925A8001930DA /* MorpheusTests.xctest */,
 				DEA535281C192798001930DA /* Demo.app */,
+				DEBE2A201C1F660E005DEF05 /* Morpheus-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,17 +206,20 @@
 				DEA534A41C1925A8001930DA /* Morpheus.h */,
 				DEA534A61C1925A8001930DA /* Info.plist */,
 				DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */,
+				DEA534C21C192607001930DA /* TableViewDataSource.swift */,
 				DEA534BB1C192607001930DA /* Action.swift */,
 				DEA534BC1C192607001930DA /* Model.swift */,
 				DEA534BE1C192607001930DA /* Reuseable.swift */,
 				DEA534BF1C192607001930DA /* Row.swift */,
+				DE14D95A1C1B3A4200A2AA41 /* Section.swift */,
 				DEA534C01C192607001930DA /* TableDataSource.swift */,
 				DEA534C11C192607001930DA /* TableModel.swift */,
-				DEA534C21C192607001930DA /* TableViewDataSource.swift */,
 				DEA534C31C192607001930DA /* Transformer.swift */,
 				DEA534C41C192607001930DA /* ViewModel.swift */,
 				DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */,
 				DEA534C51C192607001930DA /* ViewModelController.swift */,
+				DE14D95C1C1B3A7E00A2AA41 /* CellType.swift */,
+				DE14D95E1C1B3AF600A2AA41 /* Configurer.swift */,
 			);
 			path = Morpheus;
 			sourceTree = "<group>";
@@ -253,24 +288,6 @@
 			productReference = DEA534A11C1925A8001930DA /* Morpheus.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DEA534AA1C1925A8001930DA /* MorpheusTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DEA534B81C1925A8001930DA /* Build configuration list for PBXNativeTarget "MorpheusTests" */;
-			buildPhases = (
-				DEA534A71C1925A8001930DA /* Sources */,
-				DEA534A81C1925A8001930DA /* Frameworks */,
-				DEA534A91C1925A8001930DA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DEA534AE1C1925A8001930DA /* PBXTargetDependency */,
-			);
-			name = MorpheusTests;
-			productName = MorpheusTests;
-			productReference = DEA534AB1C1925A8001930DA /* MorpheusTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		DEA535271C192798001930DA /* Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEA535371C192798001930DA /* Build configuration list for PBXNativeTarget "Demo" */;
@@ -290,6 +307,25 @@
 			productReference = DEA535281C192798001930DA /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DEBE2A1F1C1F660E005DEF05 /* Morpheus-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEBE2A281C1F660E005DEF05 /* Build configuration list for PBXNativeTarget "Morpheus-iOSTests" */;
+			buildPhases = (
+				DEBE2A1C1C1F660E005DEF05 /* Sources */,
+				DEBE2A1D1C1F660E005DEF05 /* Frameworks */,
+				DEBE2A1E1C1F660E005DEF05 /* Resources */,
+				DEBE2A2F1C1F682D005DEF05 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEBE2A271C1F660E005DEF05 /* PBXTargetDependency */,
+			);
+			name = "Morpheus-iOSTests";
+			productName = "Morpheus-iOSTests";
+			productReference = DEBE2A201C1F660E005DEF05 /* Morpheus-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -303,10 +339,10 @@
 					DEA534A01C1925A8001930DA = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
-					DEA534AA1C1925A8001930DA = {
+					DEA535271C192798001930DA = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
-					DEA535271C192798001930DA = {
+					DEBE2A1F1C1F660E005DEF05 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
@@ -325,7 +361,7 @@
 			projectRoot = "";
 			targets = (
 				DEA534A01C1925A8001930DA /* Morpheus-iOS */,
-				DEA534AA1C1925A8001930DA /* MorpheusTests */,
+				DEBE2A1F1C1F660E005DEF05 /* Morpheus-iOSTests */,
 				DEA535271C192798001930DA /* Demo */,
 			);
 		};
@@ -333,13 +369,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		DEA5349F1C1925A8001930DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEA534A91C1925A8001930DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -354,6 +383,13 @@
 				DEA535321C192798001930DA /* Assets.xcassets in Resources */,
 				DEA535301C192798001930DA /* Main.storyboard in Resources */,
 				DEA5361D1C1B2685001930DA /* gamelist.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBE2A1E1C1F660E005DEF05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,22 +426,17 @@
 				DEA534D01C192607001930DA /* ViewModelController.swift in Sources */,
 				DEA534CE1C192607001930DA /* Transformer.swift in Sources */,
 				DEA534CB1C192607001930DA /* TableDataSource.swift in Sources */,
+				DE14D95F1C1B3AF600A2AA41 /* Configurer.swift in Sources */,
 				DE14D9591C1B34CF00A2AA41 /* ReactiveCocoaExt.swift in Sources */,
 				DEA534CD1C192607001930DA /* TableViewDataSource.swift in Sources */,
 				DEA534C61C192607001930DA /* Action.swift in Sources */,
+				DE14D95B1C1B3A4200A2AA41 /* Section.swift in Sources */,
 				DEA534C91C192607001930DA /* Reuseable.swift in Sources */,
 				DEA534CA1C192607001930DA /* Row.swift in Sources */,
 				DEA534C71C192607001930DA /* Model.swift in Sources */,
+				DE14D95D1C1B3A7E00A2AA41 /* CellType.swift in Sources */,
 				DEA534CC1C192607001930DA /* TableModel.swift in Sources */,
 				DE14D9571C1B2F7200A2AA41 /* ViewModelOf.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DEA534A71C1925A8001930DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DEA534B11C1925A8001930DA /* MorpheusTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,18 +458,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEBE2A1C1C1F660E005DEF05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEBE2A2E1C1F6663005DEF05 /* MorpheusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DEA534AE1C1925A8001930DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DEA534A01C1925A8001930DA /* Morpheus-iOS */;
-			targetProxy = DEA534AD1C1925A8001930DA /* PBXContainerItemProxy */;
-		};
 		DEA5353B1C192826001930DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DEA534A01C1925A8001930DA /* Morpheus-iOS */;
 			targetProxy = DEA5353A1C192826001930DA /* PBXContainerItemProxy */;
+		};
+		DEBE2A271C1F660E005DEF05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEA534A01C1925A8001930DA /* Morpheus-iOS */;
+			targetProxy = DEBE2A261C1F660E005DEF05 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -565,6 +604,7 @@
 				);
 				INFOPLIST_FILE = Morpheus/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.mpurland.Morpheus;
 				PRODUCT_NAME = Morpheus;
@@ -587,30 +627,11 @@
 				);
 				INFOPLIST_FILE = Morpheus/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.mpurland.Morpheus;
 				PRODUCT_NAME = Morpheus;
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		DEA534B91C1925A8001930DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = MorpheusTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.mpurland.MorpheusTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		DEA534BA1C1925A8001930DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = MorpheusTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.mpurland.MorpheusTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -646,6 +667,40 @@
 			};
 			name = Release;
 		};
+		DEBE2A291C1F660E005DEF05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MorpheusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.mpurland.morpheus.Morpheus-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DEBE2A2A1C1F660E005DEF05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = MorpheusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.mpurland.morpheus.Morpheus-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -667,20 +722,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DEA534B81C1925A8001930DA /* Build configuration list for PBXNativeTarget "MorpheusTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DEA534B91C1925A8001930DA /* Debug */,
-				DEA534BA1C1925A8001930DA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		DEA535371C192798001930DA /* Build configuration list for PBXNativeTarget "Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DEA535381C192798001930DA /* Debug */,
 				DEA535391C192798001930DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEBE2A281C1F660E005DEF05 /* Build configuration list for PBXNativeTarget "Morpheus-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEBE2A291C1F660E005DEF05 /* Debug */,
+				DEBE2A2A1C1F660E005DEF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

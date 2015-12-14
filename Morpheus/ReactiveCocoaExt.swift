@@ -6,6 +6,24 @@ func emptyProducer<Value, Error>() -> SignalProducer<Value, Error> {
     return SignalProducer<Value, Error>.empty
 }
 
+public func <~ <P: MutablePropertyType>(property: P?, signal: Signal<P.Value, NoError>) -> Disposable? {
+    if let property = property {
+        let disposable: Disposable = property <~ signal
+        return disposable
+    }
+    
+    return nil
+}
+
+public func <~ <P: MutablePropertyType>(property: P?, signal: SignalProducer<P.Value, NoError>) -> Disposable? {
+    if let property = property {
+        let disposable: Disposable = property <~ signal
+        return disposable
+    }
+    
+    return nil
+}
+
 extension SignalProducerType {
     /// Supresss the error from the signal producer. This is not recommended.
     public func suppressError() -> SignalProducer<Value, NoError> {

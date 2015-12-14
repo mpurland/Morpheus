@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DEA534AA1C1925A8001930DA"
-               BuildableName = "MorpheusTests.xctest"
-               BlueprintName = "MorpheusTests"
+               BlueprintIdentifier = "DEBE2A1F1C1F660E005DEF05"
+               BuildableName = "Morpheus-iOSTests.xctest"
+               BlueprintName = "Morpheus-iOSTests"
                ReferencedContainer = "container:Morpheus.xcodeproj">
             </BuildableReference>
          </TestableReference>
