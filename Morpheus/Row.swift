@@ -31,17 +31,10 @@ public struct Row: RowType, ReuseableType {
     }
 }
 
-//extension Row: RowType {
-//    public var hashValue: Int {
-//        return UUID.hashValue
-//    }
-//}
-
 public func ==(lhs: Row, rhs: Row) -> Bool {
     return lhs.UUID == rhs.UUID
 }
 
-//
 //class CellRowViewModel<Cell: UITableViewCell>: ViewModelTypeOf<(Cell, Row)> {
 //    init(cell: Cell, row: Row) {
 //        super.init((cell, row))

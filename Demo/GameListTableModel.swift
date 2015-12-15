@@ -11,7 +11,7 @@ import Morpheus
 import ReactiveCocoa
 
 class GameListTableModel: ListTableModel<Game> {
-    let apiManager = ApiManager()
+    let apiManager = ApiManager(source: .Remote)
     
     init() {
         super.init(producer: SignalProducer<[Game], NoError>.empty)

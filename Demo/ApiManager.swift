@@ -11,15 +11,30 @@ import ReactiveCocoa
 import Tyro
 import Swiftz
 
+enum ApiSource {
+    case Local, Remote
+    
+    var url: NSURL? {
+        switch self {
+        case .Local: return NSURL.init <^> NSBundle(forClass: ApiManager.self).pathForResource("gamelist.json", ofType: nil)
+        case .Remote: return NSURL(string: "http://en.lichess.org/api/game?username=hiimgosu&rated&nb=100&with_opening=1&with_moves=1")
+        }
+    }
+}
+
 class ApiManager {
     let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     
+    let source: ApiSource
+    
+    init(source: ApiSource) {
+        self.source = source
+    }
+    
     var loadAction: Action<Void, GameList?, NSError> {
-        return Action { _ in
-            let url = NSURL.init <^> NSBundle(forClass: ApiManager.self).pathForResource("gamelist.json", ofType: nil)
-            // NSURL(string: "http://en.lichess.org/api/game?username=hiimgosu&rated&nb=100&with_opening=1&with_moves=1")!
-            if let url = url {
-                return self.session.rac_dataWithRequest(NSURLRequest(URL: url)).map { data, response in
+        return Action { [weak self] _ in
+            if let weakSelf = self, url = weakSelf.source.url {
+                return weakSelf.session.rac_dataWithRequest(NSURLRequest(URL: url)).map { data, response in
                     let gameList: GameList? = JSONValue.decode(data)?.value()
                     return gameList
                 }

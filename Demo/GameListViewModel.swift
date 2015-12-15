@@ -12,7 +12,7 @@ import ReactiveCocoa
 
 struct GameListViewModel {
     let gameList = MutableProperty<GameList?>(nil)
-    let apiManager = ApiManager()
+    let apiManager = ApiManager(source: .Remote)
     
     init(gameList otherGameList: GameList?) {
         gameList.value = otherGameList
@@ -27,7 +27,7 @@ struct GameListViewModel {
     }
     
     var loading: SignalProducer<Bool, NoError> {
-        return gameList.producer.map { return $0 == nil }
+        return gameList.producer.map { $0 == nil }
     }
     
     var empty: SignalProducer<Bool, NoError> {

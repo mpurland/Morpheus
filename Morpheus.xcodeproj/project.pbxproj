@@ -245,16 +245,16 @@
 				DEA535311C192798001930DA /* Assets.xcassets */,
 				DEA535331C192798001930DA /* LaunchScreen.storyboard */,
 				DEA535361C192798001930DA /* Info.plist */,
-				DEA536041C1B2062001930DA /* Game.swift */,
-				DEA536061C1B2078001930DA /* GameCellViewModel.swift */,
 				DEA536081C1B2086001930DA /* PreparableCell.swift */,
 				DEA5360A1C1B2097001930DA /* Cell.swift */,
+				DEA536041C1B2062001930DA /* Game.swift */,
 				DEA5360C1C1B20A5001930DA /* GameCell.swift */,
+				DEA536061C1B2078001930DA /* GameCellViewModel.swift */,
+				DE14D9521C1B2B2600A2AA41 /* GameList.swift */,
 				DEA5360E1C1B20B8001930DA /* GameListViewModel.swift */,
 				DEA536101C1B20CA001930DA /* GameListTableModel.swift */,
 				DEA536121C1B20D2001930DA /* ApiManager.swift */,
 				DEA5361C1C1B2685001930DA /* gamelist.json */,
-				DE14D9521C1B2B2600A2AA41 /* GameList.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";

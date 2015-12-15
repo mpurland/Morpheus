@@ -24,7 +24,7 @@ class GameCell: Cell {
     }
     
     override func prepareCell() {
-        textLabel!.rac_text <~ viewModelProperty.producer.map { $0?.title ?? "" }
-        detailTextLabel!.rac_text <~ viewModelProperty.producer.map { $0?.subtitle ?? "" }
+        textLabel?.rac_text <~ viewModelProperty.producer.map { $0?.title ?? "" }
+        detailTextLabel?.rac_text <~ viewModelProperty.producer.map { $0?.subtitle ?? "" }
     }
 }

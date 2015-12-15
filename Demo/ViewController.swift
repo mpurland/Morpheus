@@ -58,7 +58,7 @@ class ViewController: UIViewController {
             print("reloading table")
             self?.reloadTable()
             return SignalProducer<Void, NoError>.empty
-            }
+        }
     }()
 
     lazy var toggleLoadingAction: Action<Bool, Void, NoError> = {
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
             print("toggling loading: \(loading)")
             self?.toggleLoading(loading)
             return SignalProducer<Void, NoError>.empty
-            }
+        }
     }()
 }
 
