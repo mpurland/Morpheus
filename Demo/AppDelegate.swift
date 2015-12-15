@@ -7,8 +7,6 @@
 //
 
 import UIKit
-//import ReactiveCocoa
-//import Morpheus
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,10 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-//        let producer = SignalProducer<String, NSError>(value: "")
-//        producer.suppressError().startWithNext { (string) -> () in
-//            print("got result: \(string)")
-//        }
         // Override point for customization after application launch.
         return true
     }
