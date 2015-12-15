@@ -35,15 +35,12 @@ public func ==(lhs: Row, rhs: Row) -> Bool {
     return lhs.UUID == rhs.UUID
 }
 
-//class CellRowViewModel<Cell: UITableViewCell>: ViewModelTypeOf<(Cell, Row)> {
-//    init(cell: Cell, row: Row) {
-//        super.init((cell, row))
-//        
-////        cell.textLabel!.rac_text <~ model.producer.map { $0.text }
-////        cell.detailTextLabel!.rac_text <~ model.producer.map { $0.detailTextColor }
-//        
-//        model.producer.startWithNext { cell, row in
-//            CellRowConfigurer(row: row).configure(cell)
-//        }
-//    }
-//}
+class CellRowViewModel<Cell: UITableViewCell>: ViewModelOf<(Cell, Row)> {
+    init(cell: Cell, row: Row) {
+        super.init((cell, row))
+        
+        model.producer.startWithNext { cell, row in
+            CellRowConfigurer(row: row).configure(cell)
+        }
+    }
+}

@@ -25,11 +25,11 @@ public class ListTableModelDataSource<Model> {
 
 extension ListTableModelDataSource: TableDataSource {
     private func itemForIndexPath(indexPath: NSIndexPath) -> Model? {
-        return tableModel.model[indexPath.row]
+        return tableModel.model.value[indexPath.row]
     }
     
     public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableModel.model.count
+        return tableModel.model.value.count
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

@@ -72,11 +72,7 @@ class ViewController: UIViewController {
 
 extension ViewController: ViewModelableBindable {
     typealias T = ViewModelOf<GameListViewModel>
-
-    var viewModelProducer: SignalProducer<GameListViewModel, NoError> {
-        return viewModel.producer.flatMap(.Latest) { $0.model.producer }
-    }
-
+    
     func defaultViewModel() -> ViewController.T {
         return ViewModelOf<GameListViewModel>(GameListViewModel())
     }

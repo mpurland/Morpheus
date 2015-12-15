@@ -35,6 +35,6 @@ struct GameListViewModel {
     }
     
     func load() {
-        gameList <~ apiManager.loadAction.apply().suppressError().delay(2.0, onScheduler: QueueScheduler())
+        gameList <~ apiManager.loadAction.apply().suppressError() //.delay(2.0, onScheduler: QueueScheduler())
     }
 }

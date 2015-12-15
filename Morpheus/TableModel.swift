@@ -12,12 +12,12 @@ public class ListTableModel<Model> {
     
     let modelProperty = MutableProperty<ModelType>([])
     
-    public var model: ModelType {
+    public var model: AnyProperty<ModelType> {
         get {
-            return modelProperty.value
+            return AnyProperty<ModelType>(modelProperty)
         }
         set {
-            modelProperty.value = newValue
+            modelProperty.value = newValue.value
         }
     }
     

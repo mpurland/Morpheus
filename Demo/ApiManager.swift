@@ -37,7 +37,7 @@ class ApiManager {
                 return weakSelf.session.rac_dataWithRequest(NSURLRequest(URL: url)).map { data, response in
                     let gameList: GameList? = JSONValue.decode(data)?.value()
                     return gameList
-                }
+                }.observeOn(QueueScheduler())
             }
             else {
                 return SignalProducer<GameList?, NSError>(error: NSError(domain: "", code: 400, userInfo: nil))

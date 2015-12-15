@@ -20,7 +20,6 @@
 		DEA534CB1C192607001930DA /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C01C192607001930DA /* TableDataSource.swift */; };
 		DEA534CC1C192607001930DA /* TableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C11C192607001930DA /* TableModel.swift */; };
 		DEA534CD1C192607001930DA /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C21C192607001930DA /* TableViewDataSource.swift */; };
-		DEA534CE1C192607001930DA /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C31C192607001930DA /* Transformer.swift */; };
 		DEA534CF1C192607001930DA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C41C192607001930DA /* ViewModel.swift */; };
 		DEA534D01C192607001930DA /* ViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA534C51C192607001930DA /* ViewModelController.swift */; };
 		DEA5352B1C192798001930DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5352A1C192798001930DA /* AppDelegate.swift */; };
@@ -108,7 +107,6 @@
 		DEA534C01C192607001930DA /* TableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		DEA534C11C192607001930DA /* TableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableModel.swift; sourceTree = "<group>"; };
 		DEA534C21C192607001930DA /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
-		DEA534C31C192607001930DA /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		DEA534C41C192607001930DA /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		DEA534C51C192607001930DA /* ViewModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelController.swift; sourceTree = "<group>"; };
 		DEA535281C192798001930DA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,7 +215,6 @@
 				DE14D95A1C1B3A4200A2AA41 /* Section.swift */,
 				DEA534C01C192607001930DA /* TableDataSource.swift */,
 				DEA534C11C192607001930DA /* TableModel.swift */,
-				DEA534C31C192607001930DA /* Transformer.swift */,
 				DEA534C41C192607001930DA /* ViewModel.swift */,
 				DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */,
 				DEA534C51C192607001930DA /* ViewModelController.swift */,
@@ -427,7 +424,6 @@
 			files = (
 				DEA534CF1C192607001930DA /* ViewModel.swift in Sources */,
 				DEA534D01C192607001930DA /* ViewModelController.swift in Sources */,
-				DEA534CE1C192607001930DA /* Transformer.swift in Sources */,
 				DEA534CB1C192607001930DA /* TableDataSource.swift in Sources */,
 				DE14D95F1C1B3AF600A2AA41 /* Configurer.swift in Sources */,
 				DE14D9591C1B34CF00A2AA41 /* ReactiveCocoaExt.swift in Sources */,

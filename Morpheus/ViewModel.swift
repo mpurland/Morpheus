@@ -3,6 +3,11 @@ import ReactiveCocoa
 
 /// A view model.
 public protocol ViewModel {
+    typealias Model = Self
+    
+    /// The `model` is the type
+    var model: ConstantProperty<Model> { get }
+    
     /// The `active` property determines if this view model is currently active or inactive.
     var active: MutableProperty<Bool> { get }
     

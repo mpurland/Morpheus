@@ -8,14 +8,7 @@
 
 import UIKit
 
-/// Configuration
-/// A configurable entity. This is mainly used for configuring a CellType instance.
-//public protocol ConfigurableType {
-//    typealias T: ConfigurerType
-//
-//    func configure(type: T)
-//}
-
+/// A configurer type to configure specific types. This is mainly used for configuring a CellType instance.
 public protocol ConfigurerType {
     typealias Type
     

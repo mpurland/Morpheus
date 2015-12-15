@@ -28,6 +28,10 @@ extension ViewModelableBindable where Self: AnyObject {
     public var viewModel: MutableProperty<T> {
         return lazyMutablePropertyDefaultValue(self, &ViewModelableAssociationKeys.ViewModelProperty, { self.defaultViewModel() })
     }
+    
+    public var viewModelProducer: SignalProducer<T.Model, NoError> {
+        return viewModel.producer.flatMap(.Latest) { $0.model.producer }
+    }
 }
 
 extension ViewModelableBindable where Self: UIViewController {
