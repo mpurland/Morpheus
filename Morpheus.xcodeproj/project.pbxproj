@@ -207,6 +207,9 @@
 			children = (
 				DEA534A41C1925A8001930DA /* Morpheus.h */,
 				DEA534A61C1925A8001930DA /* Info.plist */,
+				DEA534C51C192607001930DA /* ViewModelController.swift */,
+				DEA534C41C192607001930DA /* ViewModel.swift */,
+				DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */,
 				DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */,
 				DEA534C21C192607001930DA /* TableViewDataSource.swift */,
 				DEA534BC1C192607001930DA /* Model.swift */,
@@ -215,9 +218,6 @@
 				DE14D95A1C1B3A4200A2AA41 /* Section.swift */,
 				DEA534C01C192607001930DA /* TableDataSource.swift */,
 				DEA534C11C192607001930DA /* TableModel.swift */,
-				DEA534C41C192607001930DA /* ViewModel.swift */,
-				DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */,
-				DEA534C51C192607001930DA /* ViewModelController.swift */,
 				DE14D95C1C1B3A7E00A2AA41 /* CellType.swift */,
 				DE14D95E1C1B3AF600A2AA41 /* Configurer.swift */,
 			);

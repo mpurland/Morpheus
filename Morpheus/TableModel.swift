@@ -6,22 +6,21 @@ public protocol TableModel: Modelable {
     var updated: SignalProducer<Void, NoError> { get }
 }
 
-public class ListTableModel<Model> {
-    public typealias T = Model
-    public typealias ModelType = [T]
+public class ListTableModel<T> {
+    public typealias Model = [T]
     
-    let modelProperty = MutableProperty<ModelType>([])
+    let modelProperty = MutableProperty<Model>([])
     
-    public var model: AnyProperty<ModelType> {
+    public var model: AnyProperty<Model> {
         get {
-            return AnyProperty<ModelType>(modelProperty)
+            return AnyProperty<Model>(modelProperty)
         }
         set {
             modelProperty.value = newValue.value
         }
     }
     
-    public init(producer: SignalProducer<ModelType, NoError>) {
+    public init(producer: SignalProducer<Model, NoError>) {
         modelProperty <~ producer
     }
 }
