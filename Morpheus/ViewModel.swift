@@ -2,12 +2,7 @@ import Foundation
 import ReactiveCocoa
 
 /// A view model.
-public protocol ViewModel {
-    typealias Model = Self
-    
-    /// The `model` is the type
-    var model: ConstantProperty<Model> { get }
-    
+public protocol ViewModel {    
     /// The `active` property determines if this view model is currently active or inactive.
     var active: MutableProperty<Bool> { get }
     
@@ -32,4 +27,7 @@ extension ViewModel {
             return value
         }.map { _ in SignalProducer<Void, NoError>.empty }
     }
+}
+
+public protocol ModelableViewModel: ViewModel, Modelable {
 }

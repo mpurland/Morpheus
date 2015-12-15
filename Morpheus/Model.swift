@@ -3,11 +3,11 @@ import ReactiveCocoa
 
 /// A modeable type is a type that contains a model.
 public protocol Modelable {
-    typealias ModelType
-    var model: AnyProperty<ModelType> { get }
+    typealias Model
+    var model: AnyProperty<Model> { get }
 }
 
 /// A container for Modelable.
-public struct ModelableOf<ModelType>: Modelable {
-    public let model: AnyProperty<ModelType>
+public struct ModelableOf<Model>: Modelable {
+    public let model: AnyProperty<Model>
 }
