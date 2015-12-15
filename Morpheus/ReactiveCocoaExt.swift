@@ -2,24 +2,6 @@ import Foundation
 import ReactiveCocoa
 import ReactiveBind
 
-public func <~ <P: MutablePropertyType>(property: P?, signal: Signal<P.Value, NoError>) -> Disposable? {
-    if let property = property {
-        let disposable: Disposable = property <~ signal
-        return disposable
-    }
-    
-    return nil
-}
-
-public func <~ <P: MutablePropertyType>(property: P?, signal: SignalProducer<P.Value, NoError>) -> Disposable? {
-    if let property = property {
-        let disposable: Disposable = property <~ signal
-        return disposable
-    }
-    
-    return nil
-}
-
 extension SignalProducerType {
     public func mapReplace<V>(@autoclosure(escaping) closure: () -> V) -> SignalProducer<V, Error> {
         return map { _ in closure() }
