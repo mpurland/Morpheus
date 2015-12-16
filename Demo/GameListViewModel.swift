@@ -12,7 +12,7 @@ import ReactiveCocoa
 
 struct GameListViewModel: ViewModel {
     let active = MutableProperty<Bool>(false)
-    let gameList = MutableProperty<GameList?>(nil)
+    private let gameList = MutableProperty<GameList?>(nil)
     let apiManager = ApiManager(source: .Remote)
     
     init(gameList: GameList?) {

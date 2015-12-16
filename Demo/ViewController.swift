@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     
     func bindActions() {
         /// Execute reload table action when viewModel is updated
-        reloadTableAction <~ viewModelProducer.flatMap(.Latest) { $0.gameList.producer.mapEmpty() }.observeOn(UIScheduler())
+        reloadTableAction <~ viewModelProducer.flatMap(.Latest) { $0.model.producer.mapEmpty() }.observeOn(UIScheduler())
         
         /// Toggle loading when loading on view model is updated
         toggleLoadingAction <~ viewModelProducer.flatMap(.Latest) { $0.loading }.observeOn(UIScheduler())
@@ -82,13 +82,13 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.value.gameList.value?.games.count ?? 0
+        return viewModel.value.model.value?.games.count ?? 0
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GameCell", forIndexPath: indexPath)
 
-        if let cell = cell as? GameCell, game = viewModel.value.gameList.value?.games[indexPath.row] {
+        if let cell = cell as? GameCell, game = viewModel.value.model.value?.games[indexPath.row] {
             cell.viewModel = GameCellViewModel(game: game)
         }
 
