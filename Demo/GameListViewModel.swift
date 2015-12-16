@@ -10,16 +10,21 @@ import Foundation
 import Morpheus
 import ReactiveCocoa
 
-struct GameListViewModel {
+class GameListViewModel {
     let gameList = MutableProperty<GameList?>(nil)
     let apiManager = ApiManager(source: .Remote)
     
-    init(gameList otherGameList: GameList?) {
-        gameList.value = otherGameList
+    init(gameList: GameList?) {
+        self.gameList.value = gameList
+        bindActions()
     }
     
-    init() {
+    convenience init() {
         self.init(gameList: nil)
+    }
+    
+    func bindActions() {
+        gameList <~ didBecomeActiveProducer.take(1).then(load)
     }
     
     var games: [Game] {
@@ -34,7 +39,16 @@ struct GameListViewModel {
         return gameList.producer.map { $0?.games.count == 0 }
     }
     
-    func load() {
-        gameList <~ apiManager.loadAction.apply().suppressError() //.delay(2.0, onScheduler: QueueScheduler())
+    lazy var load: SignalProducer<GameList?, NoError> = {
+        return self.apiManager.loadAction.apply().suppressError().delay(1.0, onScheduler: QueueScheduler())
+    }()
+}
+
+extension GameListViewModel: ViewModel {}
+
+extension GameListViewModel: Modelable {
+    typealias Model = GameList?
+    var model: AnyProperty<Model> {
+        return AnyProperty<Model>(gameList)
     }
 }

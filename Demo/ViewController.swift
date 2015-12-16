@@ -23,8 +23,6 @@ class ViewController: UIViewController {
         loadingView.hidesWhenStopped = true
         tableView.registerClass(GameCell.self, forCellReuseIdentifier: "GameCell")
 
-        viewModel.value.model.value.load()
-
         bindActions()
     }
     
@@ -71,10 +69,10 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ViewModelableBindable {
-    typealias T = ViewModelOf<GameListViewModel>
+    typealias T = GameListViewModel
     
     func defaultViewModel() -> ViewController.T {
-        return ViewModelOf<GameListViewModel>(GameListViewModel())
+        return GameListViewModel()
     }
 }
 
@@ -84,14 +82,13 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.value.model.value.games.count
+        return viewModel.value.gameList.value?.games.count ?? 0
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GameCell", forIndexPath: indexPath)
 
-        if let cell = cell as? GameCell {
-            let game = viewModel.value.model.value.games[indexPath.row]
+        if let cell = cell as? GameCell, game = viewModel.value.gameList.value?.games[indexPath.row] {
             cell.viewModel = GameCellViewModel(game: game)
         }
 
