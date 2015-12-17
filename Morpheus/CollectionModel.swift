@@ -1,7 +1,7 @@
 import Foundation
 import ReactiveCocoa
 
-public class ListTableModel<T> {
+public class CollectionModel<T> {
     public typealias Model = [T]
     
     let modelProperty = MutableProperty<Model>([])
@@ -20,7 +20,7 @@ public class ListTableModel<T> {
     }
 }
 
-extension ListTableModel: UpdateableModel {
+extension CollectionModel: UpdateableModel {
     public var updated: SignalProducer<Void, NoError> {
         return modelProperty.producer.map { _ in }
     }
