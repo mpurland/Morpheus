@@ -7,3 +7,9 @@
 [submodule "Carthage/Checkouts/ReactiveBind"]
 	path = Carthage/Checkouts/ReactiveBind
 	url = https://github.com/mpurland/ReactiveBind.git
+[submodule "Carthage/Checkouts/Swiftz"]
+	path = Carthage/Checkouts/Swiftz
+	url = https://github.com/typelift/Swiftz.git
+[submodule "Carthage/Checkouts/Tyro"]
+	path = Carthage/Checkouts/Tyro
+	url = https://github.com/typelift/Tyro.git
