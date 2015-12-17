@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 import ReactiveCocoa
 
@@ -8,7 +7,7 @@ public protocol TableDataSource: TableViewDataSource {
 
 public class ListTableModelDataSource<Model> {
     public typealias ReuseTransformer = Model -> ReuseIdentifier
-    public typealias CellConfigurerTransformer = Model -> CellConfigurer<Model>
+    public typealias CellConfigurerTransformer = Model -> TableCellConfigurer<Model>
     
     public let tableView: UITableView
     public let tableModel: ListTableModel<Model>

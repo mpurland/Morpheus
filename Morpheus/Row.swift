@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 import ReactiveCocoa
 import ReactiveBind
@@ -40,7 +39,7 @@ class CellRowViewModel<Cell: UITableViewCell>: ViewModelOf<(Cell, Row)> {
         super.init((cell, row))
         
         model.producer.startWithNext { cell, row in
-            CellRowConfigurer(row: row).configure(cell)
+            TableCellRowConfigurer(row: row).configure(cell)
         }
     }
 }

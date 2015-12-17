@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434073761C223D0900BD37CA /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434073751C223D0900BD37CA /* CollectionViewDataSource.swift */; };
+		434073781C22430C00BD37CA /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434073771C22430C00BD37CA /* CollectionDataSource.swift */; };
+		4340737A1C22432B00BD37CA /* CollectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434073791C22432B00BD37CA /* CollectionModel.swift */; };
+		4340737C1C22464C00BD37CA /* UpdateableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4340737B1C22464C00BD37CA /* UpdateableModel.swift */; };
+		4385E6D41C2256170034DE13 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4385E6D31C2256170034DE13 /* Item.swift */; };
+		43C4C6F61C225221003791B8 /* CollectionCellConfigurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4C6F51C225221003791B8 /* CollectionCellConfigurer.swift */; };
+		43C4C6F81C225278003791B8 /* TableCellConfigurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C4C6F71C225278003791B8 /* TableCellConfigurer.swift */; };
 		DE14D9531C1B2B2600A2AA41 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D9521C1B2B2600A2AA41 /* GameList.swift */; };
 		DE14D9571C1B2F7200A2AA41 /* ViewModelOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */; };
 		DE14D9591C1B34CF00A2AA41 /* ReactiveCocoaExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */; };
@@ -90,6 +97,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		434073751C223D0900BD37CA /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		434073771C22430C00BD37CA /* CollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		434073791C22432B00BD37CA /* CollectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionModel.swift; sourceTree = "<group>"; };
+		4340737B1C22464C00BD37CA /* UpdateableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateableModel.swift; sourceTree = "<group>"; };
+		4385E6D31C2256170034DE13 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		43C4C6F51C225221003791B8 /* CollectionCellConfigurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellConfigurer.swift; sourceTree = "<group>"; };
+		43C4C6F71C225278003791B8 /* TableCellConfigurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellConfigurer.swift; sourceTree = "<group>"; };
 		DE14D9521C1B2B2600A2AA41 /* GameList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
 		DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelOf.swift; sourceTree = "<group>"; };
 		DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveCocoaExt.swift; sourceTree = "<group>"; };
@@ -127,8 +141,8 @@
 		DEA5360E1C1B20B8001930DA /* GameListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
 		DEA536101C1B20CA001930DA /* GameListTableModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListTableModel.swift; sourceTree = "<group>"; };
 		DEA536121C1B20D2001930DA /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		DEA536141C1B2218001930DA /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Demo/Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
-		DEA536151C1B2218001930DA /* Tyro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tyro.framework; path = Demo/Carthage/Build/iOS/Tyro.framework; sourceTree = "<group>"; };
+		DEA536141C1B2218001930DA /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
+		DEA536151C1B2218001930DA /* Tyro.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Tyro.framework; path = Carthage/Build/iOS/Tyro.framework; sourceTree = "<group>"; };
 		DEA5361C1C1B2685001930DA /* gamelist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gamelist.json; sourceTree = "<group>"; };
 		DEBE2A201C1F660E005DEF05 /* Morpheus-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morpheus-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBE2A4E1C1F6E95005DEF05 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -212,14 +226,21 @@
 				DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */,
 				DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */,
 				DEA534C21C192607001930DA /* TableViewDataSource.swift */,
+				434073751C223D0900BD37CA /* CollectionViewDataSource.swift */,
 				DEA534BC1C192607001930DA /* Model.swift */,
 				DEA534BE1C192607001930DA /* Reuseable.swift */,
 				DEA534BF1C192607001930DA /* Row.swift */,
+				4385E6D31C2256170034DE13 /* Item.swift */,
 				DE14D95A1C1B3A4200A2AA41 /* Section.swift */,
 				DEA534C01C192607001930DA /* TableDataSource.swift */,
+				434073771C22430C00BD37CA /* CollectionDataSource.swift */,
 				DEA534C11C192607001930DA /* TableModel.swift */,
+				434073791C22432B00BD37CA /* CollectionModel.swift */,
 				DE14D95C1C1B3A7E00A2AA41 /* CellType.swift */,
 				DE14D95E1C1B3AF600A2AA41 /* Configurer.swift */,
+				43C4C6F71C225278003791B8 /* TableCellConfigurer.swift */,
+				43C4C6F51C225221003791B8 /* CollectionCellConfigurer.swift */,
+				4340737B1C22464C00BD37CA /* UpdateableModel.swift */,
 			);
 			path = Morpheus;
 			sourceTree = "<group>";
@@ -405,8 +426,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveBind.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Demo/Carthage/Build/iOS/Swiftz.framework",
-				"$(SRCROOT)/Demo/Carthage/Build/iOS/Tyro.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swiftz.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Tyro.framework",
 			);
 			name = "Carthage Copy Frameworks";
 			outputPaths = (
@@ -422,19 +443,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4385E6D41C2256170034DE13 /* Item.swift in Sources */,
 				DEA534CF1C192607001930DA /* ViewModel.swift in Sources */,
 				DEA534D01C192607001930DA /* ViewModelController.swift in Sources */,
 				DEA534CB1C192607001930DA /* TableDataSource.swift in Sources */,
 				DE14D95F1C1B3AF600A2AA41 /* Configurer.swift in Sources */,
 				DE14D9591C1B34CF00A2AA41 /* ReactiveCocoaExt.swift in Sources */,
+				43C4C6F81C225278003791B8 /* TableCellConfigurer.swift in Sources */,
 				DEA534CD1C192607001930DA /* TableViewDataSource.swift in Sources */,
 				DE14D95B1C1B3A4200A2AA41 /* Section.swift in Sources */,
+				43C4C6F61C225221003791B8 /* CollectionCellConfigurer.swift in Sources */,
 				DEA534C91C192607001930DA /* Reuseable.swift in Sources */,
 				DEA534CA1C192607001930DA /* Row.swift in Sources */,
 				DEA534C71C192607001930DA /* Model.swift in Sources */,
 				DE14D95D1C1B3A7E00A2AA41 /* CellType.swift in Sources */,
 				DEA534CC1C192607001930DA /* TableModel.swift in Sources */,
 				DE14D9571C1B2F7200A2AA41 /* ViewModelOf.swift in Sources */,
+				4340737C1C22464C00BD37CA /* UpdateableModel.swift in Sources */,
+				4340737A1C22432B00BD37CA /* CollectionModel.swift in Sources */,
+				434073761C223D0900BD37CA /* CollectionViewDataSource.swift in Sources */,
+				434073781C22430C00BD37CA /* CollectionDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +564,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -578,7 +606,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
