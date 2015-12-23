@@ -2,44 +2,26 @@ import UIKit
 import ReactiveCocoa
 import ReactiveBind
 
-/// Rows
-public protocol RowType: Hashable, Equatable {
-    var UUID: String { get }
-}
-
-public extension RowType {
-    public var UUID: String {
-        return NSUUID().UUIDString
-    }
-    
-    public var hashValue: Int {
-        return UUID.hashValue
-    }
-}
+public protocol RowType: ItemType {}
 
 /// A model for a static row with preset data such as text and textColor.
-public struct Row: RowType, ReuseableType {
+public struct Row: RowType {
     var font: UIFont?
     var text: String?
     var textColor: UIColor?
     var detailText: String?
     var detailTextColor: UIColor?
-    
-    public var reuseIdentifier: String {
-        return UUID
-    }
 }
 
-public func ==(lhs: Row, rhs: Row) -> Bool {
-    return lhs.UUID == rhs.UUID
-}
+extension Row: ItemType {}
+extension Row: ReuseableType {}
 
-class CellRowViewModel<Cell: UITableViewCell>: ViewModelOf<(Cell, Row)> {
-    init(cell: Cell, row: Row) {
-        super.init((cell, row))
-        
-        model.producer.startWithNext { cell, row in
-            TableCellRowConfigurer(row: row).configure(cell)
-        }
-    }
-}
+//class CellRowViewModel<Cell: UITableViewCell>: ViewModelOf<(Cell, Row)> {
+//    init(cell: Cell, row: Row) {
+//        super.init((cell, row))
+//        
+//        model.producer.startWithNext { cell, row in
+//            TableCellRowConfigurer(row: row).configure(cell)
+//        }
+//    }
+//}

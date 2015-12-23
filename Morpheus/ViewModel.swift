@@ -2,14 +2,6 @@ import Foundation
 import ReactiveCocoa
 import ReactiveBind
 
-private enum ViewModelAssociationKey: String {
-    case Active
-}
-
-private struct ViewModelAssociationKeys {
-    static var ActiveProperty = ViewModelAssociationKey.Active.rawValue
-}
-
 /// A view model.
 public protocol ViewModel {    
     /// The `active` property determines if this view model is currently active or inactive.
@@ -22,6 +14,7 @@ public protocol ViewModel {
     var didBecomeInactiveProducer: SignalProducer<Void, NoError> { get }
 }
 
+/// Extensions to `ViewModel` to allow didBecomeActiveProducer and didBecomeInactiveProducer to be based on active property.
 extension ViewModel {
     public var didBecomeActiveProducer: SignalProducer<Void, NoError> {
         return active.producer.skipRepeats().filter(true).map { value -> Bool in
@@ -36,13 +29,4 @@ extension ViewModel {
             return value
         }.map { _ in SignalProducer<Void, NoError>.empty }
     }
-}
-
-extension ViewModel where Self: AnyObject {
-    public var active: MutableProperty<Bool> {
-        return lazyMutablePropertyDefaultValue(self, &ViewModelAssociationKeys.ActiveProperty, { false })
-    }
-}
-
-public protocol ModelableViewModel: ViewModel, Modelable {
 }

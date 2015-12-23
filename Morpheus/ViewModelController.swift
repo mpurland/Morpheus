@@ -34,12 +34,6 @@ extension ViewModelableBindable where Self: AnyObject {
     }
 }
 
-//extension ViewModelableBindable where T: Modelable {
-//    public var viewModelProducer: SignalProducer<T, NoError> {
-//        return viewModel.producer.flatMap(.Latest) { $0.model.producer }
-//    }
-//}
-
 extension ViewModelableBindable where Self: UIViewController {
     public func bindViewModel() {
         viewModel.producer.startWithNext { viewModel in
