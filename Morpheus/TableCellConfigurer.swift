@@ -14,9 +14,9 @@ public class TableCellConfigurer<Model>: ModelConfigurerType {
     }
 }
 
-public class TableCellRowConfigurer: TableCellConfigurer<Row> {
+public class TableCellItemConfigurer: TableCellConfigurer<Item> {
     
-    public init(row: Row) {
+    public init(row: Item) {
         super.init(model: row)
     }
     
