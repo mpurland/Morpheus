@@ -61,6 +61,7 @@
 		DEBE2A311C1F6853005DEF05 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA535FB1C1A4216001930DA /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEBE2A321C1F6853005DEF05 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA535FC1C1A4216001930DA /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEBE2A331C1F6853005DEF05 /* Morpheus.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA534A11C1925A8001930DA /* Morpheus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEECEB651C2B43FB000ED6C4 /* Preparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEECEB641C2B43FB000ED6C4 /* Preparable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,7 @@
 		DEBE2A4E1C1F6E95005DEF05 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		DEBE2A4F1C1F6E95005DEF05 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DEBE2A501C1F6E95005DEF05 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DEECEB641C2B43FB000ED6C4 /* Preparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preparable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 				43C4C6F71C225278003791B8 /* TableCellConfigurer.swift */,
 				43C4C6F51C225221003791B8 /* CollectionCellConfigurer.swift */,
 				4340737B1C22464C00BD37CA /* UpdateableModel.swift */,
+				DEECEB641C2B43FB000ED6C4 /* Preparable.swift */,
 			);
 			path = Morpheus;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				4340737C1C22464C00BD37CA /* UpdateableModel.swift in Sources */,
 				4340737A1C22432B00BD37CA /* CollectionModel.swift in Sources */,
 				434073761C223D0900BD37CA /* CollectionViewDataSource.swift in Sources */,
+				DEECEB651C2B43FB000ED6C4 /* Preparable.swift in Sources */,
 				434073781C22430C00BD37CA /* CollectionDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
