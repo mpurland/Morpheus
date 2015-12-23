@@ -18,64 +18,49 @@ public protocol CollectionViewDataSource {
     
     @available(iOS 9.0, *)
     func collectionView(collectionView: UICollectionView, canMoveItemAtIndexPath indexPath: NSIndexPath) -> Bool
+
     @available(iOS 9.0, *)
     func collectionView(collectionView: UICollectionView, moveItemAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath)
 }
 
 extension CollectionViewDataSource {
-    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
     }
     
-    @available(iOS 6.0, *)
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell? {
-        return nil
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-    @available(iOS 6.0, *)
-    public func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int? {
-        return nil
+    func collectionView(collectionView: UICollectionView, canMoveItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
     }
     
-    @available(iOS 6.0, *)
-    public func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView? {
-        return nil
-    }
-    
-    @available(iOS 9.0, *)
-    public func collectionView(collectionView: UICollectionView, canMoveItemAtIndexPath indexPath: NSIndexPath) -> Bool? {
-        return nil
-    }
-    
-    @available(iOS 9.0, *)
-    public func collectionView(collectionView: UICollectionView, moveItemAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+    func collectionView(collectionView: UICollectionView, moveItemAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
     }
 }
 
 public class CollectionViewDataSourceDelegate: NSObject {
     let dataSource: CollectionViewDataSource
+
     public init(dataSource otherDataSource: CollectionViewDataSource) {
         dataSource = otherDataSource
     }
 }
 
 extension CollectionViewDataSourceDelegate: UICollectionViewDataSource {
-    @available(iOS 6.0, *)
     public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.collectionView(collectionView, numberOfItemsInSection: section)
     }
     
-    @available(iOS 6.0, *)
     public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         return dataSource.collectionView(collectionView, cellForItemAtIndexPath: indexPath)
     }
     
-    @available(iOS 6.0, *)
     public func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return dataSource.numberOfSectionsInCollectionView(collectionView)
     }
     
-    @available(iOS 6.0, *)
     public func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         return dataSource.collectionView(collectionView, viewForSupplementaryElementOfKind: kind, atIndexPath: indexPath)
     }
