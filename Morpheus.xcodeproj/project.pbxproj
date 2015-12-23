@@ -62,7 +62,7 @@
 		DEBE2A321C1F6853005DEF05 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA535FC1C1A4216001930DA /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEBE2A331C1F6853005DEF05 /* Morpheus.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEA534A11C1925A8001930DA /* Morpheus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEECEB651C2B43FB000ED6C4 /* Preparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEECEB641C2B43FB000ED6C4 /* Preparable.swift */; };
-		DEECEB671C2B45BB000ED6C4 /* ViewModelAnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEECEB661C2B45BB000ED6C4 /* ViewModelAnyObject.swift */; };
+		DEECEB691C2B4B5F000ED6C4 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEECEB681C2B4B5F000ED6C4 /* ViewModelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +151,7 @@
 		DEBE2A4F1C1F6E95005DEF05 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DEBE2A501C1F6E95005DEF05 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DEECEB641C2B43FB000ED6C4 /* Preparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preparable.swift; sourceTree = "<group>"; };
-		DEECEB661C2B45BB000ED6C4 /* ViewModelAnyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelAnyObject.swift; sourceTree = "<group>"; };
+		DEECEB681C2B4B5F000ED6C4 /* ViewModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,14 +225,14 @@
 			children = (
 				DEA534A41C1925A8001930DA /* Morpheus.h */,
 				DEA534A61C1925A8001930DA /* Info.plist */,
-				DEA534C51C192607001930DA /* ViewModelController.swift */,
-				DEA534C41C192607001930DA /* ViewModel.swift */,
-				DEECEB661C2B45BB000ED6C4 /* ViewModelAnyObject.swift */,
-				DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */,
 				DE14D9581C1B34CF00A2AA41 /* ReactiveCocoaExt.swift */,
+				DEA534BC1C192607001930DA /* Model.swift */,
+				DEA534C41C192607001930DA /* ViewModel.swift */,
+				DE14D9561C1B2F7200A2AA41 /* ViewModelOf.swift */,
+				DEECEB681C2B4B5F000ED6C4 /* ViewModelable.swift */,
+				DEA534C51C192607001930DA /* ViewModelController.swift */,
 				DEA534C21C192607001930DA /* TableViewDataSource.swift */,
 				434073751C223D0900BD37CA /* CollectionViewDataSource.swift */,
-				DEA534BC1C192607001930DA /* Model.swift */,
 				DEA534BE1C192607001930DA /* Reuseable.swift */,
 				DE16ADF81C24A150005ABC87 /* ItemType.swift */,
 				4385E6D31C2256170034DE13 /* Item.swift */,
@@ -465,11 +465,11 @@
 				DEA534CC1C192607001930DA /* TableModel.swift in Sources */,
 				DE14D9571C1B2F7200A2AA41 /* ViewModelOf.swift in Sources */,
 				4340737C1C22464C00BD37CA /* UpdateableModel.swift in Sources */,
+				DEECEB691C2B4B5F000ED6C4 /* ViewModelable.swift in Sources */,
 				DE16ADF71C24A0A7005ABC87 /* ItemViewModel.swift in Sources */,
 				4340737A1C22432B00BD37CA /* CollectionModel.swift in Sources */,
 				434073761C223D0900BD37CA /* CollectionViewDataSource.swift in Sources */,
 				DEECEB651C2B43FB000ED6C4 /* Preparable.swift in Sources */,
-				DEECEB671C2B45BB000ED6C4 /* ViewModelAnyObject.swift in Sources */,
 				434073781C22430C00BD37CA /* CollectionDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

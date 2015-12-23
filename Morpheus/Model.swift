@@ -10,4 +10,8 @@ public protocol Modelable {
 /// A container for Modelable.
 public struct ModelableOf<Model>: Modelable {
     public let model: AnyProperty<Model>
+    
+    public init(_ otherModel: Model) {
+        model = AnyProperty(ConstantProperty(otherModel))
+    }
 }

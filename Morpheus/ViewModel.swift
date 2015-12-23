@@ -14,7 +14,7 @@ public protocol ViewModel {
     var didBecomeInactiveProducer: SignalProducer<Void, NoError> { get }
 }
 
-/// Extensions to `ViewModel` to allow didBecomeActiveProducer and didBecomeInactiveProducer to be based on active property.
+/// Extension to `ViewModel` to allow didBecomeActiveProducer and didBecomeInactiveProducer to be based on active property.
 extension ViewModel {
     public var didBecomeActiveProducer: SignalProducer<Void, NoError> {
         return active.producer.skipRepeats().filter(true).map { value -> Bool in
@@ -28,5 +28,23 @@ extension ViewModel {
             print("active = \(value)")
             return value
         }.map { _ in SignalProducer<Void, NoError>.empty }
+    }
+}
+
+/// AnyObject extension for `ViewModel`
+
+/// Association keys
+private enum ViewModelAssociationKey: String {
+    case Active
+}
+
+private struct ViewModelAssociationKeys {
+    static var ActiveProperty = ViewModelAssociationKey.Active.rawValue
+}
+
+/// Extension to `ViewModel` that are of type AnyObject to implement a default active property.
+extension ViewModel where Self: AnyObject {
+    public var active: MutableProperty<Bool> {
+        return lazyMutablePropertyDefaultValue(self, &ViewModelAssociationKeys.ActiveProperty, { false })
     }
 }

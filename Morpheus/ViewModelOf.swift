@@ -1,7 +1,7 @@
 import Foundation
 import ReactiveCocoa
 
-/// Container for ViewModel.
+/// A container for `ViewModel` that contains a `Model`.
 public class ViewModelOf<Model> {
     public let active = MutableProperty<Bool>(false)
     public let model: AnyProperty<Model>

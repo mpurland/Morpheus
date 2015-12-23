@@ -11,7 +11,7 @@ import ReactiveCocoa
 import ReactiveBind
 import Morpheus
 
-class ViewController: UIViewController {
+class ViewController: ViewModelController<GameListViewModel> {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var loadingView: UIActivityIndicatorView!
 
@@ -68,34 +68,34 @@ class ViewController: UIViewController {
     }()
 }
 
-extension ViewController: ViewModelableBindable {
-    typealias T = GameListViewModel
-    
-    func defaultViewModel() -> ViewController.T {
-        return GameListViewModel()
-    }
-}
+//extension ViewController: ViewModelable {
+//    typealias T = GameListViewModel
+//    
+//    func defaultViewModel() -> ViewController.T {
+//        return GameListViewModel()
+//    }
+//}
 
-extension ViewController: UITableViewDataSource {
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
+//extension ViewController: UITableViewDataSource {
+//    @objc func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return 1
+//    }
+//
+//    @objc func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return viewModel.value.model.value?.games.count ?? 0
+//    }
+//
+//    @objc func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("GameCell", forIndexPath: indexPath)
+//
+//        if let cell = cell as? GameCell, game = viewModel.value.model.value?.games[indexPath.row] {
+//            cell.viewModel = GameCellViewModel(game: game)
+//        }
+//
+//        return cell
+//    }
+//}
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.value.model.value?.games.count ?? 0
-    }
-
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("GameCell", forIndexPath: indexPath)
-
-        if let cell = cell as? GameCell, game = viewModel.value.model.value?.games[indexPath.row] {
-            cell.viewModel = GameCellViewModel(game: game)
-        }
-
-        return cell
-    }
-}
-
-extension ViewController: UITableViewDelegate {
-
-}
+//extension ViewController: UITableViewDelegate {
+//
+//}
