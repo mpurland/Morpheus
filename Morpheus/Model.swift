@@ -1,7 +1,7 @@
 import Foundation
 import ReactiveCocoa
 
-/// A modeable type is a type that contains a model.
+/// A modelable type is a type that contains a model.
 public protocol Modelable {
     typealias Model
     var model: AnyProperty<Model> { get }

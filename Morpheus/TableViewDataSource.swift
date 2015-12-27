@@ -1,4 +1,3 @@
-import Foundation
 import UIKit
 
 /// This is a clone of `UITableViewDataSource` without NSObjectProtocol.
