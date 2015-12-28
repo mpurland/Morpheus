@@ -14,7 +14,7 @@ public class CollectionCellConfigurer<Model>: ModelConfigurerType {
     }
 }
 
-public class CellItemConfigurer: CollectionCellConfigurer<Item> {
+public class CollectionCellItemConfigurer: CollectionCellConfigurer<Item> {
 
     public init(item: Item) {
         super.init(model: item)
