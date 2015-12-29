@@ -11,7 +11,7 @@ extension UITableViewCell: CellType {
 }
 
 extension UICollectionViewCell: CellType {
-    public typealias Type = CellItemConfigurer
+    public typealias Type = CollectionCellItemConfigurer
     public func configure(type: Type) {
         type.configure(self)
     }

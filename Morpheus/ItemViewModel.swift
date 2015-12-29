@@ -5,7 +5,7 @@ class ItemViewModel<Cell: UICollectionViewCell>: ViewModelOf<(Cell, Item)> {
         super.init((cell, item))
         
         model.producer.startWithNext { cell, item in
-            CellItemConfigurer(item: item).configure(cell)
+            CollectionCellItemConfigurer(item: item).configure(cell)
         }
     }
 }

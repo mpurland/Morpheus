@@ -15,3 +15,10 @@ public struct ModelableOf<Model>: Modelable {
         model = AnyProperty(ConstantProperty(otherModel))
     }
 }
+
+extension Modelable {
+    /// A producer that sends an event when the model has been updated.
+    var updated: SignalProducer<Void, NoError> {
+        return model.producer.map { _ in }
+    }
+}

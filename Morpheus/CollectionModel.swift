@@ -20,8 +20,8 @@ public class CollectionModel<T> {
     }
 }
 
-extension CollectionModel: UpdateableModel {
-    public var updated: SignalProducer<Void, NoError> {
-        return modelProperty.producer.map { _ in }
-    }
-}
+//extension CollectionModel: UpdateableModel {
+//    public var updated: SignalProducer<Void, NoError> {
+//        return modelProperty.producer.map { _ in }
+//    }
+//}

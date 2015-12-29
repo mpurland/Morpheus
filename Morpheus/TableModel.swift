@@ -20,8 +20,8 @@ public class ListTableModel<T> {
     }
 }
 
-extension ListTableModel: UpdateableModel {
-    public var updated: SignalProducer<Void, NoError> {
-        return modelProperty.producer.map { _ in }
-    }
-}
+//extension ListTableModel: UpdateableModel {
+//    public var updated: SignalProducer<Void, NoError> {
+//        return modelProperty.producer.map { _ in }
+//    }
+//}
