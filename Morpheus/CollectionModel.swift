@@ -1,4 +1,3 @@
-import Foundation
 import ReactiveCocoa
 
 public class CollectionModel<T> {

@@ -1,4 +1,3 @@
-import Foundation
 import ReactiveCocoa
 
 /// A modelable type is a type that contains a model.

@@ -1,5 +1,3 @@
-import Foundation
-
 public protocol ItemType: Hashable, Equatable {
     var UUID: String { get }
 }

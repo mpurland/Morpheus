@@ -1,5 +1,3 @@
-import Foundation
-
 public typealias ReuseIdentifier = String
 
 public protocol ReuseableType {

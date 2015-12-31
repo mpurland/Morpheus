@@ -1,5 +1,3 @@
-import Foundation
-
 class ItemViewModel<Cell: UICollectionViewCell>: ViewModelOf<(Cell, Item)> {
     init(cell: Cell, item: Item) {
         super.init((cell, item))

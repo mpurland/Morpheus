@@ -1,4 +1,3 @@
-import Foundation
 import ReactiveCocoa
 
 /// A container for `ViewModel` that contains a `Model`.
