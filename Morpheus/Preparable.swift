@@ -1,21 +1,21 @@
 import UIKit
 import ReactiveCocoa
 
-protocol Preparable {
+public protocol Preparable {
     func prepare()
 }
 
-class PreparableView: UIView {
+public class PreparableView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
     }
@@ -29,20 +29,20 @@ class PreparableView: UIView {
 }
 
 extension PreparableView: Preparable {
-    func prepare() {}
+    public func prepare() {}
 }
 
-class PreparableTableCell: UITableViewCell {
+public class PreparableTableCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
     }
@@ -56,7 +56,7 @@ class PreparableTableCell: UITableViewCell {
 }
 
 extension PreparableTableCell: Preparable {
-    func prepare() {}
+    public func prepare() {}
 }
 
 extension PreparableTableCell {
@@ -71,16 +71,16 @@ extension Preparable where Self: UICollectionReusableView {
     }
 }
 
-class PreparableCollectionCell: UICollectionViewCell {
+public class PreparableCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
     }
@@ -94,19 +94,19 @@ class PreparableCollectionCell: UICollectionViewCell {
 }
 
 extension PreparableCollectionCell: Preparable {
-    func prepare() {}
+    public func prepare() {}
 }
 
-class PreparableCollectionReusableView: UICollectionReusableView {
+public class PreparableCollectionReusableView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
     }
@@ -120,5 +120,5 @@ class PreparableCollectionReusableView: UICollectionReusableView {
 }
 
 extension PreparableCollectionReusableView: Preparable {
-    func prepare() {}
+    public func prepare() {}
 }
