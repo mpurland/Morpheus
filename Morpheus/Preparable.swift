@@ -60,13 +60,13 @@ extension PreparableTableCell: Preparable {
 }
 
 extension PreparableTableCell {
-    var rac_prepareForReuse: SignalProducer<Void, NoError> {
+    public var rac_prepareForReuse: SignalProducer<Void, NoError> {
         return rac_producerForSelector("prepareForReuse")
     }
 }
 
 extension Preparable where Self: UICollectionReusableView {
-    var rac_prepareForReuse: SignalProducer<Void, NoError> {
+    public var rac_prepareForReuse: SignalProducer<Void, NoError> {
         return rac_producerForSelector("prepareForReuse")
     }
 }
