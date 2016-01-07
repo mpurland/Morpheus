@@ -32,12 +32,6 @@ extension PreparableView: Preparable {
     func prepare() {}
 }
 
-extension Preparable where Self: UICollectionReusableView {
-    var rac_prepareForReuse: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("prepareForReuse")
-    }
-}
-
 class PreparableTableCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -63,6 +57,18 @@ class PreparableTableCell: UITableViewCell {
 
 extension PreparableTableCell: Preparable {
     func prepare() {}
+}
+
+extension PreparableTableCell {
+    var rac_prepareForReuse: SignalProducer<Void, NoError> {
+        return rac_producerForSelector("prepareForReuse")
+    }
+}
+
+extension Preparable where Self: UICollectionReusableView {
+    var rac_prepareForReuse: SignalProducer<Void, NoError> {
+        return rac_producerForSelector("prepareForReuse")
+    }
 }
 
 class PreparableCollectionCell: UICollectionViewCell {
