@@ -6,7 +6,7 @@ public protocol Preparable {
 }
 
 public class PreparableView: UIView {
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
@@ -33,7 +33,7 @@ extension PreparableView: Preparable {
 }
 
 public class PreparableTableCell: UITableViewCell {
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
     }
@@ -72,7 +72,7 @@ extension Preparable where Self: UICollectionReusableView {
 }
 
 public class PreparableCollectionCell: UICollectionViewCell {
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
@@ -98,7 +98,7 @@ extension PreparableCollectionCell: Preparable {
 }
 
 public class PreparableCollectionReusableView: UICollectionReusableView {
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
