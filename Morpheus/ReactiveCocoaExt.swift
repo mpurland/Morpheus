@@ -17,9 +17,11 @@ extension SignalProducerType {
     public func mapEmpty() -> SignalProducer<Void, Error> {
         return map { _ in SignalProducer<Void, Error>.empty }
     }
-    
-    public func filter(@autoclosure(escaping) closure: () -> Bool) -> SignalProducer<Value, Error> {
-        return filter { _ in closure() }
+}
+
+extension SignalProducerType where Value: Equatable {
+    public func filter(value: Value) -> SignalProducer<Value, Error> {
+        return filter { $0 == value }
     }
 }
 
