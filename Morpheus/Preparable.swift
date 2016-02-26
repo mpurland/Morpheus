@@ -6,6 +6,10 @@ public protocol Preparable {
 }
 
 public class PreparableView: UIView {
+    public convenience init() {
+        self.init(frame: CGRectZero)
+    }
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
