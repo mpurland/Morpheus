@@ -9,6 +9,7 @@
 import Foundation
 import Morpheus
 import ReactiveCocoa
+import Result
 
 struct GameListViewModel: ViewModel {
     let active = MutableProperty<Bool>(false)

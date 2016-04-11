@@ -1,0 +1,4 @@
+github "typelift/Swiftz" "master"
+github "typelift/Tyro" "master"
+github "ReactiveCocoa/ReactiveCocoa" == 4.1.0
+github "mpurland/ReactiveBind" "master"

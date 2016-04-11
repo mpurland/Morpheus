@@ -9,6 +9,7 @@
 import Foundation
 import Morpheus
 import ReactiveCocoa
+import Result
 
 class GameListTableModel: ListTableModel<Game> {
     let apiManager = ApiManager(source: .Remote)

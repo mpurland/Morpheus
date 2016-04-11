@@ -1,4 +1,5 @@
 import ReactiveCocoa
+import Result
 
 /// A modelable type is a type that contains a model.
 public protocol Modelable {

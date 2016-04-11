@@ -1,6 +1,7 @@
 import UIKit
 import ReactiveBind
 import ReactiveCocoa
+import Result
 
 public protocol ViewModelable {
     typealias T: ViewModel

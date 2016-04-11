@@ -1,5 +1,6 @@
 import UIKit
 import ReactiveCocoa
+import Result
 
 public protocol Preparable {
     func prepare()

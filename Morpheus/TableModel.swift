@@ -1,4 +1,5 @@
 import ReactiveCocoa
+import Result
 
 public class ListTableModel<T> {
     public typealias Model = [T]

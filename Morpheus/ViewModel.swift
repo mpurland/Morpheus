@@ -1,5 +1,6 @@
 import ReactiveCocoa
 import ReactiveBind
+import Result
 
 /// A view model.
 public protocol ViewModel {    

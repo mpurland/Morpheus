@@ -1,5 +1,6 @@
 import ReactiveCocoa
 import ReactiveBind
+import Result
 
 extension SignalProducerType {
     public func mapReplace<V>(@autoclosure(escaping) closure: () -> V) -> SignalProducer<V, Error> {

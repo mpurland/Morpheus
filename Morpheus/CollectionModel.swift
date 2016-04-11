@@ -1,4 +1,5 @@
 import ReactiveCocoa
+import Result
 
 public class CollectionModel<T> {
     public typealias Model = [T]
