@@ -17,7 +17,7 @@ enum ApiSource {
     var url: NSURL? {
         switch self {
         case .Local: return NSURL.init <^> NSBundle(forClass: ApiManager.self).pathForResource("gamelist.json", ofType: nil)
-        case .Remote: return NSURL(string: "http://en.lichess.org/api/game?username=hiimgosu&rated&nb=100&with_opening=1&with_moves=1")
+        case .Remote: return NSURL(string: "http://en.lichess.org/api/user/hiimgosu/games?nb=100&with_opening=1&with_moves=1")
         }
     }
 }

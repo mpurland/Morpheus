@@ -16,7 +16,7 @@ struct GameList {
 
 extension GameList: FromJSON {
     static func fromJSON(value: JSONValue) -> Either<JSONError, GameList> {
-        let games: [Game]? = value <? "list"
+        let games: [Game]? = value <? "currentPageResults"
         return (GameList.init <^> games).toEither(.Custom("Could not decode GameList from json"))
         
     }
