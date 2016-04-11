@@ -68,13 +68,13 @@ extension PreparableTableCell: Preparable {
 
 extension PreparableTableCell {
     public var rac_prepareForReuse: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("prepareForReuse")
+        return rac_producerForSelector(#selector(UITableViewCell.prepareForReuse))
     }
 }
 
 extension Preparable where Self: UICollectionReusableView {
     public var rac_prepareForReuse: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("prepareForReuse")
+        return rac_producerForSelector(#selector(UITableViewCell.prepareForReuse))
     }
 }
 
@@ -158,7 +158,7 @@ public class PreparableTableHeaderFooterView: UITableViewHeaderFooterView {
 
 extension Preparable where Self: UITableViewHeaderFooterView {
     public var rac_prepareForReuse: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("prepareForReuse")
+        return rac_producerForSelector(#selector(UITableViewCell.prepareForReuse))
     }
 }
 

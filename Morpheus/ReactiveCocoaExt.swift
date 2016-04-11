@@ -87,18 +87,18 @@ extension NSObject {
 
 extension UIViewController {
     public var viewDidLoadProducer: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("viewDidLoad")
+        return rac_producerForSelector(#selector(UIViewController.viewDidLoad))
     }
     public var viewWillAppearProducer: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("viewWillAppear:")
+        return rac_producerForSelector(#selector(UIViewController.viewWillAppear(_:)))
     }
     public var viewDidAppearProducer: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("viewDidAppear:")
+        return rac_producerForSelector(#selector(UIViewController.viewDidAppear(_:)))
     }
     public var viewWillDisappearProducer: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("viewWillDisappear:")
+        return rac_producerForSelector(#selector(UIViewController.viewWillDisappear(_:)))
     }
     public var viewDidDisappearProducer: SignalProducer<Void, NoError> {
-        return rac_producerForSelector("viewDidDisappear:")
+        return rac_producerForSelector(#selector(UIViewController.viewDidDisappear(_:)))
     }
 }

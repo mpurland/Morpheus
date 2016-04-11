@@ -4,7 +4,7 @@ import ReactiveCocoa
 import Result
 
 public protocol ViewModelable {
-    typealias T: ViewModel
+    associatedtype T: ViewModel
     
     var viewModel: MutableProperty<T> { get }
     

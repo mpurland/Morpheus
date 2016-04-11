@@ -3,7 +3,7 @@ import Result
 
 /// A modelable type is a type that contains a model.
 public protocol Modelable {
-    typealias Model
+    associatedtype Model
     var model: AnyProperty<Model> { get }
 }
 
